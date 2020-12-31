@@ -123,8 +123,19 @@ header > #menu-ham > .contenedor-interno > .menucito{
     height: 70%;
     width: 100%;
     overflow-y: scroll;
-
 }
+header > #menu-ham > .contenedor-interno > .menucito::-webkit-scrollbar {
+    width: 10px;
+  }
+  header > #menu-ham > .contenedor-interno > .menucito::-webkit-scrollbar-track {
+    background-color: rgb(37, 37, 37);
+    /* border-radius: 10px; */
+  }
+  header > #menu-ham > .contenedor-interno > .menucito::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+  }
+
 header > #menu-ham > .contenedor-interno > .menucito > ul{
     display: grid;
     grid-template-columns: 1fr;
@@ -193,9 +204,10 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
     padding-inline: 10px;
 }
 .contenedor-footer{
-    position: absolute;
+    position: fixed;
     top: 90vh;
     left: 5%;
+    z-index: 350;
 }
 .contenedor-footer > a{
     text-decoration: none;
@@ -218,6 +230,20 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow-y: scroll;
+}
+#presentation::-webkit-scrollbar {
+    width: 10px;
+}
+
+#presentation::-webkit-scrollbar-track {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+}
+
+#presentation::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
 }
 #presentation > .main{
     position: absolute;
@@ -288,12 +314,30 @@ main{
     width: 100%;
     height: 100%;
     color: var(--color-light);
+    overflow-y: scroll;
+}
+#sobre-mi::-webkit-scrollbar {
+    width: 10px;
+}
+
+#sobre-mi::-webkit-scrollbar-track {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+}
+
+#sobre-mi::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+}
+#sobre-mi::-webkit-resizer {
+    height: 100px;
 }
 #sobre-mi > .main{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     padding-top: 15%;
+    
 }
 #sobre-mi > .main > .sub-container{
     display: grid;
@@ -366,6 +410,19 @@ main{
     background-size: cover;
     position: relative;
 }
+#experiencia > .main::-webkit-scrollbar {
+    width: 10px;
+}
+
+#experiencia > .main::-webkit-scrollbar-track {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+}
+
+#experiencia > .main::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+}
 #experiencia > .main{
     position: absolute;
     top: 0;
@@ -375,6 +432,8 @@ main{
     z-index: 300;
     display: grid;
     align-items: center;
+    height: 100%;
+    overflow-y: scroll;
 }
 #experiencia > .mascara{
     width: 100%;
@@ -449,6 +508,20 @@ main{
     width: 100%;
     height: 100%;
     color: var(--color-light);
+    overflow-y: scroll;
+}
+#servicios::-webkit-scrollbar {
+    width: 10px;
+}
+
+#servicios::-webkit-scrollbar-track {
+    background-color: var(--background-input);
+    /* border-radius: 10px; */
+}
+
+#servicios::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
 }
 #servicios > .main{
     display: grid;
@@ -514,14 +587,13 @@ main{
     position: relative;
 }
 #servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos{
-    margin: auto;
-    position: absolute;
-    margin-top: 19%;
+    position: inherit;
+    margin-top: -15%;
     margin-inline: 10%;
     display: grid;
     grid-template-columns: 80px minmax(100px, 200px);
     align-items: end;
-
+    z-index: 400;
 }
 #servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1{
     font-size: 10vw;
@@ -544,11 +616,28 @@ main{
     background-size: cover;
     background-attachment: fixed;
     position: relative;
+    
 }
+
 #resume > .main{
     padding-top: 15%;
     position: relative;
     z-index: 300;
+    overflow-y: scroll;
+    height: 100vh;
+}
+#resume > .main::-webkit-scrollbar {
+    width: 10px;
+}
+
+#resume > .main::-webkit-scrollbar-track {
+    background-color: var(--background-input);
+    /* border-radius: 10px; */
+}
+
+#resume > .main::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
 }
 #resume > .mascara{
     width: 100%;
@@ -648,8 +737,22 @@ main{
 /*EMPRESAS*/
 #empresas{
     width: 100%;
-    height: auto;
+    height: 100vh;
     color: var(--color-light);
+    overflow-y: scroll
+}
+#empresas::-webkit-scrollbar {
+    width: 10px;
+}
+
+#empresas::-webkit-scrollbar-track {
+    background-color: var(--background-input);
+    /* border-radius: 10px; */
+}
+
+#empresas::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
 }
 #empresas > .main{
     display: grid;
@@ -709,6 +812,21 @@ main{
     padding-top: 10%;
     position: relative;
     z-index: 300;
+    overflow-y: scroll;
+    height: 100%;
+}
+#opiniones > .main::-webkit-scrollbar {
+    width: 10px;
+}
+
+#opiniones > .main::-webkit-scrollbar-track {
+    background-color: var(--background-input);
+    /* border-radius: 10px; */
+}
+
+#opiniones > .main::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
 }
 #opiniones > .mascara{
     width: 100%;
@@ -803,12 +921,28 @@ main{
     width: 100%;
     height: 100%;
     color: var(--color-light);
+    
+}
+#contacto > .main::-webkit-scrollbar {
+    width: 10px;
+}
+
+#contacto > .main::-webkit-scrollbar-track {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+}
+
+#contacto > .main::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
 }
 #contacto > .main{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     padding-top: 15%;
+    height: 100%;
+    overflow-y: scroll;
 }
 #contacto > .main > .sub-container{
     display: grid;
@@ -943,8 +1077,23 @@ main{
     }
     #sobre-mi{
         width: 100%;
-        height: 160%;
+        height: 100%;
+        overflow-y: scroll;
     }
+    #sobre-mi::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    #sobre-mi::-webkit-scrollbar-track {
+        background-color: var(--background-input);
+        
+    }
+    
+    #sobre-mi::-webkit-scrollbar-thumb {
+        background-color: var(--color-detalle);
+        
+    }
+    
     #sobre-mi >.main > .sub-container > .titulo {
         display: none;
     }
@@ -970,7 +1119,25 @@ main{
     }
     #experiencia{
         width: 100%;
-        height: 210%;
+        height: 100%;
+        
+    }
+    #experiencia > .main{
+        overflow-y: scroll;
+        height: 100%;
+    }
+    #experiencia > .main::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    #experiencia > .main::-webkit-scrollbar-track {
+        background-color: var(--background-input);
+        /* border-radius: 10px; */
+    }
+    
+    #experiencia > .main::-webkit-scrollbar-thumb {
+        background-color: var(--color-detalle);
+        /* border-radius: 10px; */
     }
     #experiencia > .main > .sub-container > .titulo{
         display: none;
@@ -1003,7 +1170,7 @@ main{
     }
     #servicios{
         width: 100%;
-        height: auto;
+        height: 100%;
     }
     #servicios > .main {
         padding-top: 15%;
@@ -1030,13 +1197,13 @@ main{
         grid-template-columns: 100%;
     }   
     #servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos {
-        margin: auto;
-        position: absolute;
-        margin-top: 40%;
+        position: inherit;
+        margin-top: -15%;
         margin-inline: 10%;
         display: grid;
         grid-template-columns: 80px minmax(100px, 200px);
         align-items: end;
+        z-index: 400;
     }
     #servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1 {
         font-size: 120px;
@@ -1111,6 +1278,8 @@ main{
     }
     #opiniones > .main {
         padding-top: 30%;
+        overflow-y: scroll;
+        height: 100vh;
     }
     #opiniones > .main > .sub-container {
         width: 100%;
