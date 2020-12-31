@@ -10,6 +10,7 @@ controlNext.addEventListener('click', () =>{
         i++;
         opiniones[i-1].classList.add('d-none');
         opiniones[i].classList.remove('d-none');
+        opiniones[i].style.transition = '1s';
     }
 })
 
@@ -18,6 +19,7 @@ controlPrev.addEventListener('click', () =>{
         i--;
         opiniones[i+1].classList.add('d-none');
         opiniones[i].classList.remove('d-none');
+        opiniones[i].style.transition = '1s';
     }
 })
 
