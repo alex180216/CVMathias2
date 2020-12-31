@@ -77,6 +77,84 @@ header{
 .contenedor-nav > .navbar > .menu{
     text-align: center;
 }
+/* MENU LATERAL */
+header > #menu-ham{
+    position: fixed;
+    top: 0;
+    /* right: -400px; */
+    bottom: 0;
+    width: 400px;
+    z-index: 950;
+}
+.menu-ham-activo{
+    right: 0;
+    transition: 1s;
+}
+.menu-ham-inactivo{
+    right: -400px;
+    transition: 1s;
+}
+header > #menu-ham > .contenedor-interno {
+    background-color: rgb(37, 37, 37);
+    border: 2px solid var(--background-input);
+    height: 100%;
+}
+header > #menu-ham > .contenedor-interno > .lenguajes{
+    height: 15%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(80px, 100px));
+    justify-content: center;
+    align-items: center;
+    color:rgb(165, 165, 165);
+    font-weight: 700;
+}
+header > #menu-ham > .contenedor-interno > .lenguajes > a{
+    margin: auto;
+    text-decoration: none;
+    
+}
+header > #menu-ham > .contenedor-interno > .lenguajes > a:nth-child(3){
+    margin-left: 90%;
+    text-decoration: none;
+    color: rgb(165, 165, 165);
+    font-size: 27px;
+}
+header > #menu-ham > .contenedor-interno > .menucito{
+    height: 70%;
+    width: 100%;
+    overflow-y: scroll;
+
+}
+header > #menu-ham > .contenedor-interno > .menucito > ul{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    list-style: none;
+}
+header > #menu-ham > .contenedor-interno > .menucito > ul > li{
+    font-size: 25px;
+    padding: 10px;
+}
+header > #menu-ham > .contenedor-interno > .menucito > ul > li > a{
+    text-decoration: none;
+    color: white;
+
+}
+header > #menu-ham > .contenedor-interno > .redes{
+    height: 15%;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(50px, 80px));
+    justify-content: center;
+    align-items: center;
+    /* color: white; */
+    list-style: none;
+}
+header > #menu-ham > .contenedor-interno > .redes > li > a{
+    color: var(--color-light);
+}
+header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
+    width: 25%;
+}
 
 /* CONTENEDOR SIDEBAR */
 .contenedor-niveles {
@@ -806,6 +884,28 @@ main{
 /* MEDIA QUERYS */
 
 @media (max-width:768px){
+    header > #menu-ham{
+        position: fixed;
+        top: 0;
+        /* right: -400px; */
+        bottom: 0;
+        width: 100%;
+        z-index: 950;
+    }
+    .menu-ham-activo{
+        right: 0;
+        transition: 1s;
+    }
+    .menu-ham-inactivo{
+        right: -100%;
+        transition: 1s;
+    }
+    header > #menu-ham > .contenedor-interno > .lenguajes > a:nth-child(3) {
+        text-decoration: none;
+        color: rgb(165, 165, 165);
+        font-size: 27px;
+        margin: auto;
+    }
     .contenedor-nav > .navbar {
         grid-template-columns: 25% 60% 15%;
     }
