@@ -1674,8 +1674,9 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
         
     }
     #experiencia > div > .main{
-        overflow-y: scroll;
-        height: 100%;
+        padding-top: 10%;
+        position: relative;
+        z-index: 300;
     }
     #experiencia > div > .main::-webkit-scrollbar {
         width: 10px;
@@ -1924,14 +1925,10 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
         margin-left: 10%;
         display: block;
     }
-    #opiniones{
-        width: 100%;
-        height: auto;
-    }
     #opiniones > div > .main {
         padding-top: 30%;
-        overflow-y: scroll;
-        height: 100vh;
+        position: relative;
+        z-index: 300;
     }
     #opiniones > div > .main > .sub-container {
         width: 100%;
@@ -1949,6 +1946,33 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
         display: none;
     }
     #opiniones > div >.main > .sub-container > .datos {
+        display: grid;
+        grid-template-columns: minmax(280px, 600px);
+        gap: 30px;
+        justify-content:center;
+        align-items: center;
+    }
+    #opiniones > div > div > div > .main {
+        padding-top: 30%;
+        position: relative;
+        z-index: 300;
+    }
+    #opiniones > div > div > div > .main > .sub-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(250px, 1000px);
+        align-self: center;
+        color: white;
+        gap: 50px;
+        padding-bottom: 30%;
+        padding-left: 10%;
+        padding-right: 10%;
+        margin: auto;
+    }
+    #opiniones > div > div > div > .main > .sub-container > .titulo{
+        display: none;
+    }
+    #opiniones > div > div > div >.main > .sub-container > .datos {
         display: grid;
         grid-template-columns: minmax(280px, 600px);
         gap: 30px;
