@@ -20,8 +20,25 @@
 /* FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+section:nth-child(odd){
+    background-color: #eee;
+}
+.inner{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 2em;
+}
 body{
     background-color: var(--background-secciones-oscuras);
+}
+.transparente{
+    background-color: transparent;
+}
+.colorea-nav{
+    background-color: var(--background-input);
 }
 /* HEADER */
 header{
@@ -38,7 +55,7 @@ header{
     justify-content: center;
     align-self: center;
     color: var(--color-light);
-    background-color: #0e0e0e;
+    /* background-color: #0e0e0e; */
     position: fixed;
     z-index: 900;
     top: 0;
@@ -146,6 +163,9 @@ header > #menu-ham > .contenedor-interno > .menucito > ul > li{
     font-size: 25px;
     padding: 10px;
 }
+header > #menu-ham > .contenedor-interno > .menucito > ul > li > a:hover{
+    color: var(--color-detalle);
+}
 header > #menu-ham > .contenedor-interno > .menucito > ul > li > a{
     text-decoration: none;
     color: white;
@@ -165,6 +185,9 @@ header > #menu-ham > .contenedor-interno > .redes > li > a{
 }
 header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
     width: 25%;
+}
+.contenedor-niveles > ul > .active > a > svg, header > #menu-ham > .contenedor-interno > .menucito > ul > .active > a{
+    color: var(--color-detalle);
 }
 
 /* CONTENEDOR SIDEBAR */
@@ -215,7 +238,7 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
     color: var(--color-light);
     font-size: 18px;
 }
-main{
+#fullpage{
     position: absolute;
     top: 0;
     right: 0;
@@ -245,7 +268,7 @@ main{
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
-#presentation > .main{
+#presentation > div > .main{
     position: absolute;
     top: 0;
     left: 0;
@@ -255,7 +278,7 @@ main{
     display: grid;
     align-items: center;
 }
-#presentation > .mascara{
+#presentation > div > .mascara{
     width: 100%;
     height: 100%;
     position: relative;
@@ -266,7 +289,7 @@ main{
     z-index: 50;
     background-color: var(--mascara);
 }
-#presentation > .main > .sub-container{
+#presentation > div > .main > .sub-container{
     width: 90%;
     display: grid;
     grid-template-columns: minmax(50px, 150px) minmax(250px, 1000px);
@@ -274,37 +297,37 @@ main{
     color: white;
     gap:100px;
 }
-#presentation > .main > .sub-container > .titulo{
+#presentation > div > .main > .sub-container > .titulo{
     transform: rotate(-90deg);
     margin: auto;
 }
-#presentation > .main > .sub-container > .titulo > p{
+#presentation > div > .main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 550;
     letter-spacing: 1px;
 }
-#presentation >.main > .sub-container > .datos > p{
+#presentation > div >.main > .sub-container > .datos > p{
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
 }
-#presentation >.main > .sub-container > .datos > h1{
+#presentation > div >.main > .sub-container > .datos > h1{
     font-family: 'Poppins', sans-serif;
     font-size: 70px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-#presentation >.main > .sub-container > .datos > h1 > span{
+#presentation > div >.main > .sub-container > .datos > h1 > span{
     color: var(--color-detalle);
 }
-#presentation >.main > .sub-container > .datos > .margin-minus{
+#presentation > div >.main > .sub-container > .datos > .margin-minus{
     margin-top: -25px;
 }
-#presentation >.main > .sub-container > .datos > .margen-bajo{
+#presentation > div >.main > .sub-container > .datos > .margen-bajo{
     border-bottom: var(--color-detalle) 4px solid;
     width: 150px;
     margin-top: 70px;
@@ -332,14 +355,14 @@ main{
 #sobre-mi::-webkit-resizer {
     height: 100px;
 }
-#sobre-mi > .main{
+#sobre-mi > div > div > div > .main{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     padding-top: 15%;
     
 }
-#sobre-mi > .main > .sub-container{
+#sobre-mi > div > div > div > .main > .sub-container{
     display: grid;
     grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr) minmax(250px, 1.5fr);
     height: auto;
@@ -348,11 +371,11 @@ main{
     justify-content: center;
     align-items: center;
 }
-#sobre-mi >.main > .sub-container > .titulo{
+#sobre-mi > div > div > div >.main > .sub-container > .titulo{
     transform: rotate(-90deg);
     padding-left: 110px;
 }
-#sobre-mi >.main > .sub-container > .titulo > p{
+#sobre-mi > div > div > div >.main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
@@ -360,23 +383,23 @@ main{
     letter-spacing: 1px;
     width: max-content;
 }
-#sobre-mi >.main > .sub-container > .datos > p:nth-child(1){
+#sobre-mi > div > div > div >.main > .sub-container > .datos > p:nth-child(1){
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
 }
-#sobre-mi >.main > .sub-container > .datos > h1{
+#sobre-mi > div > div > div >.main > .sub-container > .datos > h1{
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-#sobre-mi >.main > .sub-container > .datos > h1 > span{
+#sobre-mi > div > div > div >.main > .sub-container > .datos > h1 > span{
     color: var(--color-detalle);
 }
-#sobre-mi >.main > .sub-container > .datos > .descripcion{
+#sobre-mi > div > div > div >.main > .sub-container > .datos > .descripcion{
     margin-top: 20%;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
@@ -384,17 +407,85 @@ main{
     color: gray;
     text-align: justify;
 }
-#sobre-mi >.main > .sub-container > .habilidades{
+#sobre-mi > div > div > div >.main > .sub-container > .habilidades{
     margin-left: 30px;
 }
-#sobre-mi >.main > .sub-container > .habilidades > .lista-progress > .item > .progress{
+#sobre-mi > div > div > div >.main > .sub-container > .habilidades > .lista-progress > .item > .progress{
     width: 75%;
     height: 8px;
 }
-#sobre-mi >.main > .sub-container > .habilidades > .lista-progress > .item > .progress > .progress-bar{
+#sobre-mi > div > div > div >.main > .sub-container > .habilidades > .lista-progress > .item > .progress > .progress-bar{
     background-color: var(--color-detalle);
 }
-#sobre-mi >.main > .sub-container > .habilidades > .lista-progress > .item > .nivel{
+#sobre-mi > div > div > div >.main > .sub-container > .habilidades > .lista-progress > .item > .nivel{
+    display: grid;
+    grid-template-columns: auto 30px;
+    width: 75%;
+    margin-bottom: -13px;
+}
+#sobre-mi > div > .main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+#sobre-mi > div > .main > .sub-container{
+    display: grid;
+    grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr) minmax(250px, 1.5fr);
+    height: auto;
+    gap: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#sobre-mi > div >.main > .sub-container > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 110px;
+}
+#sobre-mi > div >.main > .sub-container > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    width: max-content;
+}
+#sobre-mi > div >.main > .sub-container > .datos > p:nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#sobre-mi > div >.main > .sub-container > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#sobre-mi > div >.main > .sub-container > .datos > h1 > span{
+    color: var(--color-detalle);
+}
+#sobre-mi > div >.main > .sub-container > .datos > .descripcion{
+    margin-top: 20%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: gray;
+    text-align: justify;
+}
+#sobre-mi > div >.main > .sub-container > .habilidades{
+    margin-left: 30px;
+}
+#sobre-mi > div >.main > .sub-container > .habilidades > .lista-progress > .item > .progress{
+    width: 75%;
+    height: 8px;
+}
+#sobre-mi > div >.main > .sub-container > .habilidades > .lista-progress > .item > .progress > .progress-bar{
+    background-color: var(--color-detalle);
+}
+#sobre-mi > div >.main > .sub-container > .habilidades > .lista-progress > .item > .nivel{
     display: grid;
     grid-template-columns: auto 30px;
     width: 75%;
@@ -410,32 +501,26 @@ main{
     background-size: cover;
     position: relative;
 }
-#experiencia > .main::-webkit-scrollbar {
+#experiencia > div > .main::-webkit-scrollbar {
     width: 10px;
 }
 
-#experiencia > .main::-webkit-scrollbar-track {
+#experiencia > div > .main::-webkit-scrollbar-track {
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
 
-#experiencia > .main::-webkit-scrollbar-thumb {
+#experiencia > div > .main::-webkit-scrollbar-thumb {
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
-#experiencia > .main{
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+#experiencia > div > .main{
+    padding-top: 5%;
+    position: relative;
     z-index: 300;
-    display: grid;
-    align-items: center;
-    height: 100%;
-    overflow-y: scroll;
+    padding-bottom: 10%;
 }
-#experiencia > .mascara{
+#experiencia > div > .mascara{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -446,7 +531,7 @@ main{
     z-index: 250;
     background-color: var(--mascara);
 }
-#experiencia > .main > .sub-container{
+#experiencia > div > .main > .sub-container{
     width: 90%;
     display: grid;
     grid-template-columns: minmax(50px, 150px) 1fr;
@@ -455,26 +540,27 @@ main{
     gap: 10px;
     position: relative;
     z-index: inherit;
+    margin-top: 15%;
 }
-#experiencia > .main > .sub-container > .titulo{
+#experiencia > div > .main > .sub-container > .titulo{
     transform: rotate(-90deg);
     margin: auto;
 }
-#experiencia > .main > .sub-container > .titulo > p{
+#experiencia > div > .main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 550;
     letter-spacing: 1px;
 }
-#experiencia >.main > .sub-container > .datos > h2{
+#experiencia > div >.main > .sub-container > .datos > h2{
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-#experiencia >.main > .sub-container > .datos > .grilla-jobs{
+#experiencia > div >.main > .sub-container > .datos > .grilla-jobs{
     display: grid;
     grid-template-columns: repeat(4, minmax(150px, 360px));
     gap: 30px;
@@ -482,7 +568,7 @@ main{
     margin-bottom: 30px;
     padding: 10px;
 }
-#experiencia >.main > .sub-container > .datos > .grilla-jobs > .grilla-items{
+#experiencia > div >.main > .sub-container > .datos > .grilla-jobs > .grilla-items{
     width: 100%;
     height: 100%;
     border: white 3px solid;
@@ -491,14 +577,89 @@ main{
     text-decoration: none;
     color: white;
 }
-#experiencia >.main > .sub-container > .datos > .grilla-jobs > .grilla-items > h5{
+#experiencia > div >.main > .sub-container > .datos > .grilla-jobs > .grilla-items > h5{
     font-weight: 700;
 }
-#experiencia >.main > .sub-container > .datos > .grilla-jobs > .grilla-items:hover{
+#experiencia > div >.main > .sub-container > .datos > .grilla-jobs > .grilla-items:hover{
     background-color: var(--color-detalle);
     color: var(--background-secciones-oscuras);
 }
-#experiencia >.main > .sub-container > .datos > a{
+#experiencia > div >.main > .sub-container > .datos > a{
+    text-decoration: none;
+    color: var(--color-light);
+    margin-top: 10px;
+}
+#experiencia > div > div > div > .main{
+    padding-top: 5%;
+    position: relative;
+    z-index: 300;
+    padding-bottom: 10%;
+}
+#experiencia > div > div > div > .mascara{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 250;
+    background-color: var(--mascara);
+}
+#experiencia > div > div > div > .main > .sub-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: minmax(50px, 150px) 1fr;
+    align-self: center;
+    color: white;
+    gap: 10px;
+    position: relative;
+    z-index: inherit;
+    margin-top: 15%;
+}
+#experiencia > div > div > div > .main > .sub-container > .titulo{
+    transform: rotate(-90deg);
+    margin: auto;
+}
+#experiencia > div > div > div > .main > .sub-container > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+#experiencia > div > div > div >.main > .sub-container > .datos > h2{
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#experiencia > div > div > div >.main > .sub-container > .datos > .grilla-jobs{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 360px));
+    gap: 30px;
+    margin-top: 10%;
+    margin-bottom: 30px;
+    padding: 10px;
+}
+#experiencia > div > div > div >.main > .sub-container > .datos > .grilla-jobs > .grilla-items{
+    width: 100%;
+    height: 100%;
+    border: white 3px solid;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+#experiencia > div > div > div >.main > .sub-container > .datos > .grilla-jobs > .grilla-items > h5{
+    font-weight: 700;
+}
+#experiencia > div > div > div >.main > .sub-container > .datos > .grilla-jobs > .grilla-items:hover{
+    background-color: var(--color-detalle);
+    color: var(--background-secciones-oscuras);
+}
+#experiencia > div > div > div >.main > .sub-container > .datos > a{
     text-decoration: none;
     color: var(--color-light);
     margin-top: 10px;
@@ -523,14 +684,14 @@ main{
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
-#servicios > .main{
+#servicios > div > div > div > .main{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     padding-top: 15%;
     padding-bottom: 25%;
 }
-#servicios > .main > .sub-container{
+#servicios > div > div > div > .main > .sub-container{
     display: grid;
     grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr) minmax(250px, 1.5fr);
     height: auto;
@@ -539,11 +700,11 @@ main{
     justify-content: center;
     align-items: center;
 }
-#servicios >.main > .sub-container > .titulo{
+#servicios > div > div > div >.main > .sub-container > .titulo{
     transform: rotate(-90deg);
     padding-left: 110px;
 }
-#servicios >.main > .sub-container > .titulo > p{
+#servicios > div > div > div >.main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
@@ -551,23 +712,23 @@ main{
     letter-spacing: 1px;
     width: max-content;
 }
-#servicios >.main > .sub-container > .datos > p:nth-child(1){
+#servicios > div > div > div >.main > .sub-container > .datos > p:nth-child(1){
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
 }
-#servicios >.main > .sub-container > .datos > h1{
+#servicios > div > div > div >.main > .sub-container > .datos > h1{
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-#servicios >.main > .sub-container > .datos > h1 > span{
+#servicios > div > div > div >.main > .sub-container > .datos > h1 > span{
     color: var(--color-detalle);
 }
-#servicios >.main > .sub-container > .datos > .servicios{
+#servicios > div > div > div >.main > .sub-container > .datos > .servicios{
     margin-top: 20%;
     font-family: 'Poppins', sans-serif;
     letter-spacing: 1px;
@@ -575,18 +736,18 @@ main{
     color: gray;
     text-align: justify;
 }
-#servicios >.main > .sub-container > .tiempo{
+#servicios > div > div > div >.main > .sub-container > .tiempo{
     margin-left: 30px;
 }
-#servicios > .main > .sub-container > .tiempo > .contenedor-interno{
+#servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno{
     display: grid;
     grid-template-columns: 80%;
 }
-#servicios > .main > .sub-container > .tiempo > .contenedor-interno > img{
+#servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno > img{
     width: 100%;
     position: relative;
 }
-#servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos{
+#servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos{
     position: inherit;
     margin-top: -15%;
     margin-inline: 10%;
@@ -595,10 +756,93 @@ main{
     align-items: end;
     z-index: 400;
 }
-#servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1{
+#servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1{
     font-size: 10vw;
 }
-#servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos > p{
+#servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > p{
+    font-size: 2.5vw;
+    line-height: 90%;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-family: var(--fuente);
+    margin-bottom: 15%;
+}
+#servicios > div > .main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding-top: 15%;
+    padding-bottom: 25%;
+}
+#servicios > div > .main > .sub-container{
+    display: grid;
+    grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr) minmax(250px, 1.5fr);
+    height: auto;
+    gap: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#servicios > div >.main > .sub-container > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 110px;
+}
+#servicios > div >.main > .sub-container > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    width: max-content;
+}
+#servicios > div >.main > .sub-container > .datos > p:nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#servicios > div >.main > .sub-container > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#servicios > div >.main > .sub-container > .datos > h1 > span{
+    color: var(--color-detalle);
+}
+#servicios > div >.main > .sub-container > .datos > .servicios{
+    margin-top: 20%;
+    font-family: 'Poppins', sans-serif;
+    letter-spacing: 1px;
+    font-size: 15px;
+    color: gray;
+    text-align: justify;
+}
+#servicios > div >.main > .sub-container > .tiempo{
+    margin-left: 30px;
+}
+#servicios > div > .main > .sub-container > .tiempo > .contenedor-interno{
+    display: grid;
+    grid-template-columns: 80%;
+}
+#servicios > div > .main > .sub-container > .tiempo > .contenedor-interno > img{
+    width: 100%;
+    position: relative;
+}
+#servicios > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos{
+    position: inherit;
+    margin-top: -15%;
+    margin-inline: 10%;
+    display: grid;
+    grid-template-columns: 80px minmax(100px, 200px);
+    align-items: end;
+    z-index: 400;
+}
+#servicios > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1{
+    font-size: 10vw;
+}
+#servicios > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > p{
     font-size: 2.5vw;
     line-height: 90%;
     text-transform: uppercase;
@@ -609,37 +853,35 @@ main{
 /*RESUME*/
 #resume{
     width: 100%;
-    height: auto;
-    background-image: url(../img/img-background.png);
+    height: 100%;
+    background-image: url('../img/img-background.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     position: relative;
     
 }
 
-#resume > .main{
+#resume > div > .main{
     padding-top: 15%;
     position: relative;
     z-index: 300;
-    overflow-y: scroll;
-    height: 100vh;
+    padding-bottom: 15%;
 }
-#resume > .main::-webkit-scrollbar {
+#resume > div > .main::-webkit-scrollbar {
     width: 10px;
 }
 
-#resume > .main::-webkit-scrollbar-track {
+#resume > div > .main::-webkit-scrollbar-track {
     background-color: var(--background-input);
     /* border-radius: 10px; */
 }
 
-#resume > .main::-webkit-scrollbar-thumb {
+#resume > div > .main::-webkit-scrollbar-thumb {
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
-#resume > .mascara{
+#resume > div > .mascara{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -650,36 +892,36 @@ main{
     z-index: 250;
     background-color: var(--mascara);
 }
-#resume > .main > .sub-container{
+#resume > div > .main > .sub-container{
     width: 90%;
     display: grid;
-    grid-template-columns: minmax(50px, 150px) minmax(250px, 1000px);
+    grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr);
     align-self: center;
     color: white;
     gap:50px;
     padding-bottom: 10%;
 }
-#resume > .main > .sub-container > .titulo{
+#resume > div > .main > .sub-container > .titulo{
     transform: rotate(-90deg);
     margin: auto;
     margin-top: 15px;
 }
-#resume > .main > .sub-container > .titulo > p{
+#resume > div > .main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 550;
     letter-spacing: 1px;
 }
-#resume >.main > .sub-container > .datos {
+#resume > div >.main > .sub-container > .datos {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 30px;
 }
-#resume >.main > .sub-container > .datos > .grilla-items{
+#resume > div >.main > .sub-container > .datos > .grilla-items{
     background-color: var(--background-resumen);
 }
-#resume >.main > .sub-container > .datos > .grilla-items > p{
+#resume > div >.main > .sub-container > .datos > .grilla-items > p{
     background-color: var(--color-detalle-opaco);
     padding: 15px;
     text-align: center;
@@ -687,17 +929,17 @@ main{
     color: var(--background-secciones-oscuras);
     font-weight: 800;
 }
-#resume >.main > .sub-container > .datos > .grilla-items > .item{
+#resume > div >.main > .sub-container > .datos > .grilla-items > .item{
     list-style: none;
     position: relative;
 }
-#resume >.main > .sub-container > .datos > .grilla-items > ul > li {
+#resume > div >.main > .sub-container > .datos > .grilla-items > ul > li {
     padding-left: 5.7%;
     border-left: 1px solid rgba(104, 104, 104, 0.705);
     padding-right: 7%;
     padding-bottom: 2%;
 }
-#resume >.main > .sub-container > .datos > .grilla-items > ul > li:before {
+#resume > div >.main > .sub-container > .datos > .grilla-items > ul > li:before {
     position: absolute;
     content: '';
     left: 7%;
@@ -707,26 +949,127 @@ main{
     border-radius: 50%;
     border: 2px solid var(--color-detalle);
 }
-#resume >.main > .sub-container > .datos > .grilla-items > ul > li > h3{
+#resume > div >.main > .sub-container > .datos > .grilla-items > ul > li > h3{
     font-size: 18px;
     text-transform: uppercase;
     font-weight: 600;
     margin-bottom: 14px;
 }
-#resume >.main > .sub-container > .datos > .grilla-items > .item > li > .lugar{
+#resume > div >.main > .sub-container > .datos > .grilla-items > .item > li > .lugar{
     margin-top: 25px;
     margin-bottom: 14px;
     font-size: 14px;
     font-weight: 600;
 }
-#resume >.main > .sub-container > .datos > .grilla-items > .item > li > .fecha{
+#resume > div >.main > .sub-container > .datos > .grilla-items > .item > li > .fecha{
     margin-top: 25px;
     margin-bottom: 14px;
     font-size: 12px;
     color: var(--color-detalle);
     letter-spacing: 1px;
 }
-#resume >.main > .sub-container > .datos > .grilla-items > .item > li > .descripcion{
+#resume > div >.main > .sub-container > .datos > .grilla-items > .item > li > .descripcion{
+    margin-top: 30px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    color: rgb(209, 209, 209);
+    line-height: 27px;
+    text-align: justify;
+}
+#resume > div > div > div > .main{
+    z-index: 400;
+    position: relative;
+}
+#resume > div > div > div > .mascara{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 250;
+    background-color: var(--mascara);
+}
+#resume > div > div > div > .main > .sub-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr);
+    align-self: center;
+    color: white;
+    gap:50px;
+    padding-top: 15%;
+    position: relative;
+    z-index: 400;
+}
+#resume > div > div > div > .main > .sub-container > .titulo{
+    transform: rotate(-90deg);
+    margin: auto;
+    margin-top: 15px;
+}
+#resume > div > div > div > .main > .sub-container > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+#resume > div > div > div >.main > .sub-container > .datos {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items{
+    background-color: var(--background-resumen);
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > p{
+    background-color: var(--color-detalle-opaco);
+    padding: 15px;
+    text-align: center;
+    font-family: var(--fuente);
+    color: var(--background-secciones-oscuras);
+    font-weight: 800;
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > .item{
+    list-style: none;
+    position: relative;
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > ul > li {
+    padding-left: 5.7%;
+    border-left: 1px solid rgba(104, 104, 104, 0.705);
+    padding-right: 7%;
+    padding-bottom: 2%;
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > ul > li:before {
+    position: absolute;
+    content: '';
+    left: 7%;
+    width: 1rem;
+    height: 1rem;
+    background: #0e0e0e;
+    border-radius: 50%;
+    border: 2px solid var(--color-detalle);
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > ul > li > h3{
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > .item > li > .lugar{
+    margin-top: 25px;
+    margin-bottom: 14px;
+    font-size: 14px;
+    font-weight: 600;
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > .item > li > .fecha{
+    margin-top: 25px;
+    margin-bottom: 14px;
+    font-size: 12px;
+    color: var(--color-detalle);
+    letter-spacing: 1px;
+}
+#resume > div > div > div >.main > .sub-container > .datos > .grilla-items > .item > li > .descripcion{
     margin-top: 30px;
     margin-bottom: 14px;
     font-size: 14px;
@@ -754,14 +1097,14 @@ main{
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
-#empresas > .main{
+#empresas > div > div > div > .main{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     padding-top: 15%;
     padding-bottom: 25%;
 }
-#empresas > .main > .sub-container{
+#empresas > div > div > div > .main > .sub-container{
     display: grid;
     grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr);
     height: auto;
@@ -771,11 +1114,11 @@ main{
     align-items: center;
     width: 90%;
 }
-#empresas >.main > .sub-container > .titulo{
+#empresas > div > div > div >.main > .sub-container > .titulo{
     transform: rotate(-90deg);
     padding-left: 110px;
 }
-#empresas >.main > .sub-container > .titulo > p{
+#empresas > div > div > div >.main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
@@ -783,17 +1126,17 @@ main{
     letter-spacing: 1px;
     width: max-content;
 }
-#empresas >.main > .sub-container > .datos > p:nth-child(1){
+#empresas > div > div > div >.main > .sub-container > .datos > p:nth-child(1){
     display: none;
 }
-#empresas >.main > .sub-container > .datos > .empresas{
+#empresas > div > div > div >.main > .sub-container > .datos > .empresas{
     display: grid;
     grid-template-columns: repeat(3, minmax(200px, 350px));
     justify-content: center;
     align-items: center;
     gap:20px;
 }
-#empresas >.main > .sub-container > .datos > .empresas > div > img{
+#empresas > div > div > div >.main > .sub-container > .datos > .empresas > div > img{
     width: 100%;
     
 }
@@ -805,30 +1148,27 @@ main{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
     position: relative;
 }
-#opiniones > .main{
+#opiniones > div > .main{
     padding-top: 10%;
     position: relative;
     z-index: 300;
-    overflow-y: scroll;
-    height: 100%;
 }
-#opiniones > .main::-webkit-scrollbar {
+#opiniones > div > .main::-webkit-scrollbar {
     width: 10px;
 }
 
-#opiniones > .main::-webkit-scrollbar-track {
+#opiniones > div > .main::-webkit-scrollbar-track {
     background-color: var(--background-input);
     /* border-radius: 10px; */
 }
 
-#opiniones > .main::-webkit-scrollbar-thumb {
+#opiniones > div > .main::-webkit-scrollbar-thumb {
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
-#opiniones > .mascara{
+#opiniones > div > .mascara{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -839,7 +1179,7 @@ main{
     z-index: 250;
     background-color: var(--mascara);
 }
-#opiniones > .main > .sub-container{
+#opiniones > div > .main > .sub-container{
     width: 90%;
     display: grid;
     grid-template-columns: minmax(50px, 150px) minmax(250px, 1000px);
@@ -848,59 +1188,59 @@ main{
     gap:50px;
     padding-bottom: 10%;
 }
-#opiniones > .main > .sub-container > .titulo{
+#opiniones > div > .main > .sub-container > .titulo{
     transform: rotate(-90deg);
     margin: auto;
     margin-top: 15px;
 }
-#opiniones > .main > .sub-container > .titulo > p{
+#opiniones > div > .main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
     font-weight: 550;
     letter-spacing: 1px;
 }
-#opiniones >.main > .sub-container > .datos {
+#opiniones > div >.main > .sub-container > .datos {
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 30px;
 }
-#opiniones >.main > .sub-container > .datos > .grilla-items{
+#opiniones > div >.main > .sub-container > .datos > .grilla-items{
     
 }
-#opiniones >.main > .sub-container > .datos > .grilla-items > div > img{
+#opiniones > div >.main > .sub-container > .datos > .grilla-items > div > img{
     width: 70px;
     color:var(--color-detalle);
 }
-#opiniones >.main > .sub-container > .datos > .grilla-items > h1{
+#opiniones > div >.main > .sub-container > .datos > .grilla-items > h1{
     text-transform: uppercase;
     font-weight: 700;
     margin-top: 30%;
 }
-#opiniones > .main > .sub-container > .datos > .grilla-items > .opinion-item > .opinion{
+#opiniones > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .opinion{
     font-size: 19px;
     text-align: justify;
     line-height: 40px;
 }
-#opiniones > .main > .sub-container > .datos > .grilla-items > .opinion-item > .firma{
+#opiniones > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .firma{
     font-size: 18px;
     font-weight: 700;
     margin-top: 50px;
 }
-#opiniones > .main > .sub-container > .datos > .grilla-items > .opinion-item > .origen{
+#opiniones > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .origen{
     font-size: 15px;
     margin-top: -20px;
     font-style: italic;
     font-weight: 600;
 }
-#opiniones > .main > .sub-container > .datos > .grilla-items > .controles{
+#opiniones > div > .main > .sub-container > .datos > .grilla-items > .controles{
     display: grid;
     grid-template-columns: repeat(2, 70px);
     justify-content: center;
     gap: 5px;
     margin-top: 100px;
 }
-#opiniones > .main > .sub-container > .datos > .grilla-items > .controles > a{
+#opiniones > div > .main > .sub-container > .datos > .grilla-items > .controles > a{
     text-decoration: none;
     color: white;
     font-size: 30px;
@@ -909,7 +1249,111 @@ main{
     width: 50px;
     height: 60px;
 }
-#opiniones > .main > .sub-container > .datos > .grilla-items > .controles > a:hover{
+#opiniones > div > .main > .sub-container > .datos > .grilla-items > .controles > a:hover{
+    background-color: var(--color-detalle);
+}
+
+
+#opiniones > div > div > div > .main{
+    padding-top: 10%;
+    position: relative;
+    z-index: 300;
+}
+#opiniones > div > div > div > .main::-webkit-scrollbar {
+    width: 10px;
+}
+
+#opiniones > div > div > div > .main::-webkit-scrollbar-track {
+    background-color: var(--background-input);
+    /* border-radius: 10px; */
+}
+
+#opiniones > div > div > div > .main::-webkit-scrollbar-thumb {
+    background-color: var(--color-detalle);
+    /* border-radius: 10px; */
+}
+#opiniones > div > div > div > .mascara{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 250;
+    background-color: var(--mascara);
+}
+#opiniones > div > div > div > .main > .sub-container{
+    width: 90%;
+    display: grid;
+    grid-template-columns: minmax(50px, 150px) minmax(250px, 1000px);
+    align-self: center;
+    color: white;
+    gap:50px;
+    padding-bottom: 10%;
+}
+#opiniones > div > div > div > .main > .sub-container > .titulo{
+    transform: rotate(-90deg);
+    margin: auto;
+    margin-top: 15px;
+}
+#opiniones > div > div > div > .main > .sub-container > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+#opiniones > div > div > div >.main > .sub-container > .datos {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 30px;
+}
+#opiniones > div > div > div >.main > .sub-container > .datos > .grilla-items{
+    
+}
+#opiniones > div > div > div >.main > .sub-container > .datos > .grilla-items > div > img{
+    width: 70px;
+    color:var(--color-detalle);
+}
+#opiniones > div > div > div >.main > .sub-container > .datos > .grilla-items > h1{
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-top: 30%;
+}
+#opiniones > div > div > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .opinion{
+    font-size: 19px;
+    text-align: justify;
+    line-height: 40px;
+}
+#opiniones > div > div > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .firma{
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 50px;
+}
+#opiniones > div > div > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .origen{
+    font-size: 15px;
+    margin-top: -20px;
+    font-style: italic;
+    font-weight: 600;
+}
+#opiniones > div > div > div > .main > .sub-container > .datos > .grilla-items > .controles{
+    display: grid;
+    grid-template-columns: repeat(2, 70px);
+    justify-content: center;
+    gap: 5px;
+    margin-top: 100px;
+}
+#opiniones > div > div > div > .main > .sub-container > .datos > .grilla-items > .controles > a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    border: 2px solid white;
+    text-align: center;
+    width: 50px;
+    height: 60px;
+}
+#opiniones > div > div > div > .main > .sub-container > .datos > .grilla-items > .controles > a:hover{
     background-color: var(--color-detalle);
 }
 .enciende-control{
@@ -936,15 +1380,16 @@ main{
     background-color: var(--color-detalle);
     /* border-radius: 10px; */
 }
-#contacto > .main{
+#contacto > div > .main{
     display: grid;
     grid-template-columns: 1fr;
     justify-content: center;
     padding-top: 15%;
     height: 100%;
-    overflow-y: scroll;
+    width: 100%;
+    padding-bottom: 10%;
 }
-#contacto > .main > .sub-container{
+#contacto > div > .main > .sub-container{
     display: grid;
     grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr);
     height: auto;
@@ -953,11 +1398,11 @@ main{
     justify-content: center;
     align-items: center;
 }
-#contacto >.main > .sub-container > .titulo{
+#contacto > div >.main > .sub-container > .titulo{
     transform: rotate(-90deg);
     padding-left: 110px;
 }
-#contacto >.main > .sub-container > .titulo > p{
+#contacto > div >.main > .sub-container > .titulo > p{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-transform: uppercase;
@@ -965,50 +1410,133 @@ main{
     letter-spacing: 1px;
     width: max-content;
 }
-#contacto >.main > .sub-container > .datos {
+#contacto > div >.main > .sub-container > .datos {
     display: grid;
     grid-template-columns: minmax(250px, 1fr);
     width: 85%;
 }
-#contacto >.main > .sub-container > .datos > p:nth-child(1){
+#contacto > div >.main > .sub-container > .datos > p:nth-child(1){
     font-family: 'Poppins', sans-serif;
     font-size: 30px;
     font-weight: 600;
     letter-spacing: 1px;
 }
-#contacto >.main > .sub-container > .datos > h1{
+#contacto > div >.main > .sub-container > .datos > h1{
     font-family: 'Poppins', sans-serif;
     font-size: 36px;
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-#contacto >.main > .sub-container > .datos > h1 > span{
+#contacto > div >.main > .sub-container > .datos > h1 > span{
     color: var(--color-detalle);
 }
-#contacto >.main > .sub-container > .datos > form{
+#contacto > div >.main > .sub-container > .datos > form{
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
 }
-#contacto >.main > .sub-container > .datos > form > .fila > .nombre-email{
+#contacto > div >.main > .sub-container > .datos > form > .fila > .nombre-email{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-content: center;
     gap: 20px;
 }
-#contacto >.main > .sub-container > .datos > form > .fila > .nombre-email > div > input{
+#contacto > div >.main > .sub-container > .datos > form > .fila > .nombre-email > div > input{
     background-color: var(--background-input);
     color: white;
     border: none;
 }
-#contacto >.main > .sub-container > .datos > form > div > input,
-#contacto >.main > .sub-container > .datos > form > div > textarea{
+#contacto > div >.main > .sub-container > .datos > form > div > input,
+#contacto > div >.main > .sub-container > .datos > form > div > textarea{
     background-color: var(--background-input);
     border: none;
     color: white;
 }
-#contacto >.main > .sub-container > .datos > form > button{
+#contacto > div >.main > .sub-container > .datos > form > button{
+    width: 20%;
+    background-color: var(--color-detalle);
+    color: var(--background-secciones-oscuras);
+    font-weight: 800;
+}
+
+
+
+#contacto > div > div > div > .main{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    padding-top: 15%;
+    height: 100%;
+    overflow-y: scroll;
+    width: 100%;
+    padding-bottom: 10%;
+}
+#contacto > div > div > div > .main > .sub-container{
+    display: grid;
+    grid-template-columns: minmax(50px, 150px) minmax(250px, 1fr);
+    height: auto;
+    gap: 20px;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#contacto > div > div > div >.main > .sub-container > .titulo{
+    transform: rotate(-90deg);
+    padding-left: 110px;
+}
+#contacto > div > div > div >.main > .sub-container > .titulo > p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 550;
+    letter-spacing: 1px;
+    width: max-content;
+}
+#contacto > div > div > div >.main > .sub-container > .datos {
+    display: grid;
+    grid-template-columns: minmax(250px, 1fr);
+    width: 85%;
+}
+#contacto > div > div > div >.main > .sub-container > .datos > p:nth-child(1){
+    font-family: 'Poppins', sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+#contacto > div > div > div >.main > .sub-container > .datos > h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+#contacto > div > div > div >.main > .sub-container > .datos > h1 > span{
+    color: var(--color-detalle);
+}
+#contacto > div > div > div >.main > .sub-container > .datos > form{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+#contacto > div > div > div >.main > .sub-container > .datos > form > .fila > .nombre-email{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 20px;
+}
+#contacto > div > div > div >.main > .sub-container > .datos > form > .fila > .nombre-email > div > input{
+    background-color: var(--background-input);
+    color: white;
+    border: none;
+}
+#contacto > div > div > div >.main > .sub-container > .datos > form > div > input,
+#contacto > div > div > div >.main > .sub-container > .datos > form > div > textarea{
+    background-color: var(--background-input);
+    border: none;
+    color: white;
+}
+#contacto > div > div > div >.main > .sub-container > .datos > form > button{
     width: 20%;
     background-color: var(--color-detalle);
     color: var(--background-secciones-oscuras);
@@ -1055,24 +1583,24 @@ main{
     .contenedor-footer{
         display: none;
     }
-    #presentation > .main > .sub-container > .titulo{
+    #presentation > div > .main > .sub-container > .titulo{
         display: none;
     }
-    #presentation > .main > .sub-container{
+    #presentation > div > .main > .sub-container{
         width: 100%;
         grid-template-columns:1fr;
         align-self: center;
         color: white;
         padding: 10%;
     }
-    #presentation >.main > .sub-container > .datos > h1 {
+    #presentation > div >.main > .sub-container > .datos > h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 10vw;
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: uppercase;
     }
-    #presentation >.main > .sub-container > .datos > .margin-minus{
+    #presentation > div >.main > .sub-container > .datos > .margin-minus{
         margin-top: -10px;
     }
     #sobre-mi{
@@ -1094,10 +1622,10 @@ main{
         
     }
     
-    #sobre-mi >.main > .sub-container > .titulo {
+    #sobre-mi > div > div > div >.main > .sub-container > .titulo {
         display: none;
     }
-    #sobre-mi > .main > .sub-container{
+    #sobre-mi > div > div > div > .main > .sub-container{
         width: 100%;
         grid-template-columns:1fr;
         align-self: center;
@@ -1105,16 +1633,39 @@ main{
         padding: 10%;
         margin-bottom: 10%;
     }
-    #sobre-mi >.main > .sub-container > .habilidades{
+    #sobre-mi > div > div > div >.main > .sub-container > .habilidades{
         margin-left: 0;
     }
-    #sobre-mi >.main > .sub-container > .habilidades > .lista-progress > .item > .nivel{
+    #sobre-mi > div > div > div >.main > .sub-container > .habilidades > .lista-progress > .item > .nivel{
         display: grid;
         grid-template-columns: auto 30px;
         width: 100%;
         margin-bottom: -13px;
     }
-    #sobre-mi >.main > .sub-container > .habilidades > .lista-progress > .item > .progress{
+    #sobre-mi > div > div > div >.main > .sub-container > .habilidades > .lista-progress > .item > .progress{
+        width: 100%;
+    }
+    #sobre-mi > div >.main > .sub-container > .titulo {
+        display: none;
+    }
+    #sobre-mi > div > .main > .sub-container{
+        width: 100%;
+        grid-template-columns:1fr;
+        align-self: center;
+        color: white;
+        padding: 10%;
+        margin-bottom: 10%;
+    }
+    #sobre-mi > div >.main > .sub-container > .habilidades{
+        margin-left: 0;
+    }
+    #sobre-mi > div >.main > .sub-container > .habilidades > .lista-progress > .item > .nivel{
+        display: grid;
+        grid-template-columns: auto 30px;
+        width: 100%;
+        margin-bottom: -13px;
+    }
+    #sobre-mi > div >.main > .sub-container > .habilidades > .lista-progress > .item > .progress{
         width: 100%;
     }
     #experiencia{
@@ -1122,27 +1673,27 @@ main{
         height: 100%;
         
     }
-    #experiencia > .main{
+    #experiencia > div > .main{
         overflow-y: scroll;
         height: 100%;
     }
-    #experiencia > .main::-webkit-scrollbar {
+    #experiencia > div > .main::-webkit-scrollbar {
         width: 10px;
     }
     
-    #experiencia > .main::-webkit-scrollbar-track {
+    #experiencia > div > .main::-webkit-scrollbar-track {
         background-color: var(--background-input);
         /* border-radius: 10px; */
     }
     
-    #experiencia > .main::-webkit-scrollbar-thumb {
+    #experiencia > div > .main::-webkit-scrollbar-thumb {
         background-color: var(--color-detalle);
         /* border-radius: 10px; */
     }
-    #experiencia > .main > .sub-container > .titulo{
+    #experiencia > div > .main > .sub-container > .titulo{
         display: none;
     }
-    #experiencia > .main > .sub-container{
+    #experiencia > div > .main > .sub-container{
         width: 100%;
         grid-template-columns:1fr;
         align-self: center;
@@ -1150,17 +1701,47 @@ main{
         padding: 10%;
         padding-top: 100px;
     }
-    #experiencia >.main > .sub-container > .datos > h1 {
+    #experiencia > div >.main > .sub-container > .datos > h1 {
         font-family: 'Poppins', sans-serif;
         font-size: 10vw;
         font-weight: 600;
         letter-spacing: 1px;
         text-transform: uppercase;
     }
-    #experiencia >.main > .sub-container > .datos > .margin-minus{
+    #experiencia > div >.main > .sub-container > .datos > .margin-minus{
         margin-top: -10px;
     }
-    #experiencia >.main > .sub-container > .datos > .grilla-jobs{
+    #experiencia > div >.main > .sub-container > .datos > .grilla-jobs{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 10%;
+        margin-bottom: 30px;
+        padding: 10px;
+    }
+
+    #experiencia > div > div > div > .main > .sub-container > .titulo{
+        display: none;
+    }
+    #experiencia > div > div > div > .main > .sub-container{
+        width: 100%;
+        grid-template-columns:1fr;
+        align-self: center;
+        color: white;
+        padding: 10%;
+        padding-top: 100px;
+    }
+    #experiencia > div > div > div >.main > .sub-container > .datos > h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 10vw;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    #experiencia > div > div > div >.main > .sub-container > .datos > .margin-minus{
+        margin-top: -10px;
+    }
+    #experiencia > div > div > div >.main > .sub-container > .datos > .grilla-jobs{
         display: grid;
         grid-template-columns: 1fr;
         gap: 30px;
@@ -1172,14 +1753,14 @@ main{
         width: 100%;
         height: 100%;
     }
-    #servicios > .main {
+    #servicios > div > div > div > .main {
         padding-top: 15%;
         padding-bottom: 35%;
     }
-    #servicios >.main > .sub-container > .titulo {
+    #servicios > div > div > div >.main > .sub-container > .titulo {
         display: none;
     }
-    #servicios > .main > .sub-container{
+    #servicios > div > div > div > .main > .sub-container{
         width: 100%;
         grid-template-columns:1fr;
         align-self: center;
@@ -1188,15 +1769,15 @@ main{
         margin-bottom: 10%;
         margin-top: 10%;
     }
-    #servicios >.main > .sub-container > .tiempo {
+    #servicios > div > div > div >.main > .sub-container > .tiempo {
         margin-left: 10px;
         margin-right: 10px;
     }
-    #servicios > .main > .sub-container > .tiempo > .contenedor-interno{
+    #servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno{
         display: grid;
         grid-template-columns: 100%;
     }   
-    #servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos {
+    #servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos {
         position: inherit;
         margin-top: -15%;
         margin-inline: 10%;
@@ -1205,10 +1786,10 @@ main{
         align-items: end;
         z-index: 400;
     }
-    #servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1 {
+    #servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1 {
         font-size: 120px;
     }
-    #servicios > .main > .sub-container > .tiempo > .contenedor-interno > .annos > p {
+    #servicios > div > div > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > p {
         font-size: 25px;
         line-height: 90%;
         text-transform: uppercase;
@@ -1216,7 +1797,52 @@ main{
         font-family: var(--fuente);
         margin-bottom: 15%;
     }
-    #resume > .main > .sub-container {
+
+    #servicios > div > .main {
+        padding-top: 15%;
+        padding-bottom: 35%;
+    }
+    #servicios > div >.main > .sub-container > .titulo {
+        display: none;
+    }
+    #servicios > div > .main > .sub-container{
+        width: 100%;
+        grid-template-columns:1fr;
+        align-self: center;
+        color: white;
+        padding: 10%;
+        margin-bottom: 10%;
+        margin-top: 10%;
+    }
+    #servicios > div >.main > .sub-container > .tiempo {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    #servicios > div > .main > .sub-container > .tiempo > .contenedor-interno{
+        display: grid;
+        grid-template-columns: 100%;
+    }   
+    #servicios > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos {
+        position: inherit;
+        margin-top: -15%;
+        margin-inline: 10%;
+        display: grid;
+        grid-template-columns: 80px minmax(100px, 200px);
+        align-items: end;
+        z-index: 400;
+    }
+    #servicios > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > h1 {
+        font-size: 120px;
+    }
+    #servicios > div > .main > .sub-container > .tiempo > .contenedor-interno > .annos > p {
+        font-size: 25px;
+        line-height: 90%;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-family: var(--fuente);
+        margin-bottom: 15%;
+    }
+    #resume > div > .main > .sub-container {
         width: 100%;
         display: grid;
         grid-template-columns: minmax(250px, 1000px);
@@ -1225,14 +1851,14 @@ main{
         gap: 50px;
         padding: 5%;
     }
-    #resume >.main > .sub-container > .titulo {
+    #resume > div >.main > .sub-container > .titulo {
         display: none;
     }
-    #resume >.main > .sub-container > .datos {
+    #resume > div >.main > .sub-container > .datos {
         display: grid;
         grid-template-columns:minmax(250px, 500px);
     }
-    #resume >.main > .sub-container > .datos > .grilla-items > ul > li:before {
+    #resume > div >.main > .sub-container > .datos > .grilla-items > ul > li:before {
         position: absolute;
         content: '';
         left: 9%;
@@ -1242,7 +1868,33 @@ main{
         border-radius: 50%;
         border: 2px solid var(--color-detalle);
     }
-    #empresas > .main > .sub-container{
+    #resume > div > div > div > .main > .sub-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: minmax(250px, 1000px);
+        align-self: center;
+        color: white;
+        gap: 50px;
+        padding: 5%;
+    }
+    #resume > div > div > div >.main > .sub-container > .titulo {
+        display: none;
+    }
+    #resume > div > div > div >.main > .sub-container > .datos {
+        display: grid;
+        grid-template-columns:minmax(250px, 500px);
+    }
+    #resume > div > div > div >.main > .sub-container > .datos > .grilla-items > ul > li:before {
+        position: absolute;
+        content: '';
+        left: 9%;
+        width: 1rem;
+        height: 1rem;
+        background: #0e0e0e;
+        border-radius: 50%;
+        border: 2px solid var(--color-detalle);
+    }
+    #empresas > div > div >  div > .main > .sub-container{
         display: grid;
         grid-template-columns: minmax(250px, 1fr);
         height: auto;
@@ -1254,17 +1906,17 @@ main{
         margin-top: 20%;
         padding: 7%;
     }
-    #empresas >.main > .sub-container > .titulo {
+    #empresas > div > div >  div >.main > .sub-container > .titulo {
         display: none;
     }
-    #empresas >.main > .sub-container > .datos > .empresas{
+    #empresas > div > div >  div >.main > .sub-container > .datos > .empresas{
         display: grid;
         grid-template-columns: minmax(200px, 350px);
         justify-content: center;
         align-items: center;
         gap:20px;
     }
-    #empresas >.main > .sub-container > .datos > p:nth-child(1){
+    #empresas > div > div >  div >.main > .sub-container > .datos > p:nth-child(1){
         font-family: 'Poppins', sans-serif;
         font-size: 5vw;
         font-weight: 600;
@@ -1276,12 +1928,12 @@ main{
         width: 100%;
         height: auto;
     }
-    #opiniones > .main {
+    #opiniones > div > .main {
         padding-top: 30%;
         overflow-y: scroll;
         height: 100vh;
     }
-    #opiniones > .main > .sub-container {
+    #opiniones > div > .main > .sub-container {
         width: 100%;
         display: grid;
         grid-template-columns: minmax(250px, 1000px);
@@ -1293,46 +1945,74 @@ main{
         padding-right: 10%;
         margin: auto;
     }
-    #opiniones > .main > .sub-container > .titulo{
+    #opiniones > div > .main > .sub-container > .titulo{
         display: none;
     }
-    #opiniones >.main > .sub-container > .datos {
+    #opiniones > div >.main > .sub-container > .datos {
         display: grid;
         grid-template-columns: minmax(280px, 600px);
         gap: 30px;
         justify-content:center;
         align-items: center;
     }
-    #contacto > .main > .sub-container{
+    #contacto > div > .main > .sub-container{
         display: grid;
         grid-template-columns: minmax(250px, 1fr);
         margin: auto;
     }
-    #contacto >.main > .sub-container > .titulo{
+    #contacto > div >.main > .sub-container > .titulo{
         display: none;
     }
-    #contacto >.main > .sub-container > .datos {
+    #contacto > div >.main > .sub-container > .datos {
         display: grid;
         grid-template-columns: minmax(250px, 1fr);
         width: 100%;
         padding-top: 25%;
     }
-    #contacto >.main > .sub-container > .datos > form {
+    #contacto > div >.main > .sub-container > .datos > form {
         display: grid;
         grid-template-columns: 1fr;
         gap: 10px;
         width: 100%;
     }
-    #contacto >.main > .sub-container > .datos > form > button {
+    #contacto > div >.main > .sub-container > .datos > form > button {
         width: auto;
     }
-    #contacto >.main > .sub-container > .datos > form > .fila > .nombre-email {
+    #contacto > div >.main > .sub-container > .datos > form > .fila > .nombre-email {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #contacto > div > div > div > .main > .sub-container{
+        display: grid;
+        grid-template-columns: minmax(250px, 1fr);
+        margin: auto;
+    }
+    #contacto > div > div > div >.main > .sub-container > .titulo{
+        display: none;
+    }
+    #contacto > div > div > div >.main > .sub-container > .datos {
+        display: grid;
+        grid-template-columns: minmax(250px, 1fr);
+        width: 100%;
+        padding-top: 25%;
+    }
+    #contacto > div > div > div >.main > .sub-container > .datos > form {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 10px;
+        width: 100%;
+    }
+    #contacto > div > div > div >.main > .sub-container > .datos > form > button {
+        width: auto;
+    }
+    #contacto > div > div > div >.main > .sub-container > .datos > form > .fila > .nombre-email {
         display: grid;
         grid-template-columns: 1fr;
     }
 }
 @media (min-width:768px) and (max-width:1000px){
-    #experiencia >.main > .sub-container > .datos > .grilla-jobs{
+    #experiencia > div >.main > .sub-container > .datos > .grilla-jobs{
         display: grid;
         grid-template-columns: repeat(2, minmax(150px, 360px));
         gap: 30px;
@@ -1340,7 +2020,7 @@ main{
         margin-bottom: 30px;
         padding: 10px;
     }
-    #resume >.main > .sub-container > .datos > .grilla-items > ul > li:before {
+    #resume > div >.main > .sub-container > .datos > .grilla-items > ul > li:before {
         position: absolute;
         content: '';
         left: 6%;
@@ -1350,7 +2030,7 @@ main{
         border-radius: 50%;
         border: 2px solid var(--color-detalle);
     }
-    #empresas >.main > .sub-container > .datos > .empresas{
+    #empresas > div > div > div >.main > .sub-container > .datos > .empresas{
         display: grid;
         grid-template-columns: repeat(2, minmax(200px, 350px));
         justify-content: center;
@@ -1359,7 +2039,7 @@ main{
     }
 }
 @media (min-width:1400px){
-    #resume >.main > .sub-container > .datos > .grilla-items > ul > li:before {
+    #resume > div >.main > .sub-container > .datos > .grilla-items > ul > li:before {
         position: absolute;
         content: '';
         left: 5%;
@@ -1368,5 +2048,109 @@ main{
         background: #0e0e0e;
         border-radius: 50%;
         border: 2px solid var(--color-detalle);
+    }
+    #opiniones > div > .main{
+        padding-top: 10%;
+        position: relative;
+        z-index: 300;
+        overflow-y: scroll;
+        height: 100%;
+    }
+    #opiniones > div > .main::-webkit-scrollbar {
+        width: 10px;
+    }
+    
+    #opiniones > div > .main::-webkit-scrollbar-track {
+        background-color: var(--background-input);
+        /* border-radius: 10px; */
+    }
+    
+    #opiniones > div > .main::-webkit-scrollbar-thumb {
+        background-color: var(--color-detalle);
+        /* border-radius: 10px; */
+    }
+    #opiniones > div > .mascara{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 250;
+        background-color: var(--mascara);
+    }
+    #opiniones > div > .main > .sub-container{
+        width: 90%;
+        display: grid;
+        grid-template-columns: minmax(50px, 150px) minmax(250px, 1000px);
+        align-self: center;
+        color: white;
+        gap:50px;
+        padding-bottom: 10%;
+    }
+    #opiniones > div > .main > .sub-container > .titulo{
+        transform: rotate(-90deg);
+        margin: auto;
+        margin-top: 15px;
+    }
+    #opiniones > div > .main > .sub-container > .titulo > p{
+        font-family: 'Poppins', sans-serif;
+        font-size: 15px;
+        text-transform: uppercase;
+        font-weight: 550;
+        letter-spacing: 1px;
+    }
+    #opiniones > div >.main > .sub-container > .datos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+    }
+    #opiniones > div >.main > .sub-container > .datos > .grilla-items{
+        
+    }
+    #opiniones > div >.main > .sub-container > .datos > .grilla-items > div > img{
+        width: 70px;
+        color:var(--color-detalle);
+    }
+    #opiniones > div >.main > .sub-container > .datos > .grilla-items > h1{
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-top: 30%;
+    }
+    #opiniones > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .opinion{
+        font-size: 19px;
+        text-align: justify;
+        line-height: 40px;
+    }
+    #opiniones > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .firma{
+        font-size: 18px;
+        font-weight: 700;
+        margin-top: 50px;
+    }
+    #opiniones > div > .main > .sub-container > .datos > .grilla-items > .opinion-item > .origen{
+        font-size: 15px;
+        margin-top: -20px;
+        font-style: italic;
+        font-weight: 600;
+    }
+    #opiniones > div > .main > .sub-container > .datos > .grilla-items > .controles{
+        display: grid;
+        grid-template-columns: repeat(2, 70px);
+        justify-content: center;
+        gap: 5px;
+        margin-top: 100px;
+    }
+    #opiniones > div > .main > .sub-container > .datos > .grilla-items > .controles > a{
+        text-decoration: none;
+        color: white;
+        font-size: 30px;
+        border: 2px solid white;
+        text-align: center;
+        width: 50px;
+        height: 60px;
+    }
+    #opiniones > div > .main > .sub-container > .datos > .grilla-items > .controles > a:hover{
+        background-color: var(--color-detalle);
     }
 }

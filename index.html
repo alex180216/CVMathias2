@@ -8,9 +8,8 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link href=”https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css” rel=”stylesheet”></link> 
-    <!-- Fuentes -->
-    
-    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" type="text/css" href="./css/fullpage.css" />
+
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 <body>
@@ -63,58 +62,58 @@
             </nav>
         </div>
         <div class="contenedor-niveles">
-            <ul>
-                <li class="item">
-                    <a href="" class="active">
+            <ul id="myMenu">
+                <li class="item" data-menuanchor="presentation">
+                    <a href="#presentation">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="">
+                <li class="item" data-menuanchor="sobre-mi">
+                    <a href="#sobre-mi">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="">
+                <li class="item" data-menuanchor="experiencia">
+                    <a href="#experiencia">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="">
+                <li class="item" data-menuanchor="servicios">
+                    <a href="#servicios">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="">
+                <li class="item" data-menuanchor="resume">
+                    <a href="#resume">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="">
+                <li class="item" data-menuanchor="empresas">
+                    <a href="#empresas">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="">
+                <li class="item" data-menuanchor="opiniones">
+                    <a href="#opiniones">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
-                <li class="item">
-                    <a href="">
+                <li class="item" data-menuanchor="contacto">
+                    <a href="#contacto">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
@@ -141,44 +140,44 @@
                     <a href="" class="no-active">SPA</a>
                     <a href="" id="cerrar-ham">X</a>
                 </div>
-                <div class="menucito">
+                <div id="myMenu" class="menucito">
                     <ul>
-                        <li>
+                        <li data-menuanchor="presentation">
                             <a href="#presentation">
                                 Presentacion
                             </a>
                         </li>
-                        <li>
+                        <li data-menuanchor="sobre-mi">
                             <a href="#sobre-mi">
                                 Sobre mi
                             </a>
                         </li>
-                        <li>
+                        <li data-menuanchor="experiencia">
                             <a href="#experiencia">
                                 Experiencia
                             </a>
                         </li>
-                        <li>
+                        <li data-menuanchor="servicios">
                             <a href="#servicios">
                                 Servicios
                             </a>
                         </li>
-                        <li>
+                        <li data-menuanchor="resume">
                             <a href="#resume">
                                 Resumen
                             </a>
                         </li>
-                        <li>
+                        <li data-menuanchor="empresas">
                             <a href="#empresas">
                                 Empresas
                             </a>
                         </li>
-                        <li>
+                        <li data-menuanchor="opiniones">
                             <a href="#opiniones">
                                 Opiniones
                             </a>
                         </li>
-                        <li>
+                        <li data-menuanchor="contacto">
                             <a href="#contacto">
                                 Contacto
                             </a>
@@ -224,373 +223,395 @@
 
         </div>
     </header>
-    
-    <main>
         
-        <section id="presentation">
-            <div class="mascara">
-            
-            </div>
-            <div class="main">
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>Presentación</p>
-                    </div>
-                    <div class="datos">
-                        <p>Welcome to <br>Matias Design Studio</p>
-            
-                        <h1><span>Hola!</span> Soy </h1>
-                        <h1 class="margin-minus">Matias Wajchman.</h1>
-
-                        <div class="margen-bajo">
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <section id="sobre-mi">
-            <div class="main">
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>Habilidades</p>
-                    </div>
-                    <div class="datos">
-                        <p>Sobre mi</p>
-        
-                        <h1>My mission is <span>design & develop</span> the best websites around</h1>
-
-                        <p class="descripcion">
-                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum quasi consectetur tenetur perspiciatis iste beatae pariatur culpa, fuga iusto, harum accusamus corrupti quos! Nam tenetur aspernatur ab, dolor aut ipsam.
-                            
-                        </p>
-                    </div>
-                    <div class="habilidades">
-                        <div class="lista-progress">
-                            <div class="item my-5">
-                                <div class="nivel">
-                                    <p>Development</p>
-                                    <p>75%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="item my-5">
-                                <div class="nivel">
-                                    <p>Development</p>
-                                    <p>75%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="item my-5">
-                                <div class="nivel">
-                                    <p>Development</p>
-                                    <p>75%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-                            <div class="item my-5">
-                                <div class="nivel">
-                                    <p>Development</p>
-                                    <p>75%</p>
-                                </div>
-                                <div class="progress">
-                                    <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                </div>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>            
-        </section>
-        <section id="experiencia">
-            <!-- <img src="./img/img1.png" alt=""> -->
-            <div class="mascara">
+    <main id="fullpage">
+            <section id="presentation" class="section" data-anchor="presentation">
+                <div class="mascara">
                 
-            </div>
-            <div class="main">
-                
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>Experiencia</p>
-                    </div>
-                    <div class="datos">
-                        <h2>Trabajos realizados</h2>
-        
-                        <div class="grilla-jobs">
-                            <a class="grilla-items">
-                                <h5>UCAM Minimalist Apartment</h5>
-                                <p>papelito in paelito</p>
-                            </a>
-                            <a class="grilla-items">
-                                <h5>UCAM Minimalist Apartment</h5>
-                                <p>papelito in paelito</p>
-                            </a>
-                            <a class="grilla-items">
-                                <h5>UCAM Minimalist Apartment</h5>
-                                <p>papelito in paelito</p>
-                            </a>
-                            <a class="grilla-items">
-                                <h5>UCAM Minimalist Apartment</h5>
-                                <p>papelito in paelito</p>
-                            </a>
-                            <a class="grilla-items">
-                                <h5>UCAM Minimalist Apartment</h5>
-                                <p>papelito in paelito</p>
-                            </a>
-                            <a class="grilla-items">
-                                <h5>UCAM Minimalist Apartment</h5>
-                                <p>papelito in paelito</p>
-                            </a>
-
-                            
-
-                        </div>
-                        
-                        <a href="">
-                            <h3>OTROS TRABAJOS ></h3>
-                        </a>
-                    </div>
                 </div>
-            </div>
+                <div class="main">
+                    <div class="sub-container">
+                        <div class="titulo">
+                            <p>Presentación</p>
+                        </div>
+                        <div class="datos">
+                            <p>Welcome to <br>Matias Design Studio</p>
+                
+                            <h1><span>Hola!</span> Soy </h1>
+                            <h1 class="margin-minus">Matias Wajchman.</h1>
 
-        </section>
-        <section id="servicios">
-            <div class="main">
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>Servicios</p>
-                    </div>
-                    <div class="datos">
-                        <p>Mis Servicios</p>
-        
-                        <h1>Construyo <span>cosas maravillosas</span></h1>
+                            <div class="margen-bajo">
 
-                        <ol class="servicios">
-                            <li>Developer</li>
-                            <li>Developer</li>
-                            <li>Developer</li>
-                            <li>Developer</li>
-                            <li>Developer</li>
-                        </ol>
-                    </div>
-                    <div class="tiempo">
-                        <div class="contenedor-interno">
-                            <img src="./img/img2.jpg" alt="">
-                            <div class="annos">
-                                <h1>5</h1>
-                                <p>años de experiencia</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>            
-        </section>
-        <section id="resume">
-            <div class="mascara">
-            
-            </div>
-            <div class="main">
-                
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>resume</p>
-                    </div>
-                    <div class="datos">
-                        <div class="grilla-items">
-                            <p>Educación</p>
-                            <ul class="item">
-                                <li>
-                                    <h3>Specialization Course</h3>
-                                    <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                    <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                    <p class="descripcion">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h3>Specialization Course</h3>
-                                    <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                    <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                    <p class="descripcion">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                    </p>
-                                </li>
-                            </ul>
+
+            </section>
+            <section id="sobre-mi" class="section" data-anchor="sobre-mi">
+                <div class="main">
+                    <div class="sub-container">
+                        <div class="titulo">
+                            <p>Habilidades</p>
                         </div>
-                        <div class="grilla-items">
+                        <div class="datos">
+                            <p>Sobre mi</p>
+            
+                            <h1>My mission is <span>design & develop</span> the best websites around</h1>
+
+                            <p class="descripcion">
+                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum quasi consectetur tenetur perspiciatis iste beatae pariatur culpa, fuga iusto, harum accusamus corrupti quos! Nam tenetur aspernatur ab, dolor aut ipsam.
+                                
+                            </p>
+                        </div>
+                        <div class="habilidades">
+                            <div class="lista-progress">
+                                <div class="item my-5">
+                                    <div class="nivel">
+                                        <p>Development</p>
+                                        <p>75%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="item my-5">
+                                    <div class="nivel">
+                                        <p>Development</p>
+                                        <p>75%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="item my-5">
+                                    <div class="nivel">
+                                        <p>Development</p>
+                                        <p>75%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                                <div class="item my-5">
+                                    <div class="nivel">
+                                        <p>Development</p>
+                                        <p>75%</p>
+                                    </div>
+                                    <div class="progress">
+                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+        
+                            </div>
+                        </div>
+                    </div>
+                </div>            
+            </section>
+            <section id="experiencia" class="section" data-anchor="experiencia">
+                <!-- <img src="./img/img1.png" alt=""> -->
+                <div class="mascara">
+                    
+                </div>
+                <div class="main">
+                    
+                    <div class="sub-container">
+                        <div class="titulo">
                             <p>Experiencia</p>
-                            <ul class="item">
-                                <li>
-                                    <h3>Specialization Course</h3>
-                                    <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                    <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                    <p class="descripcion">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                    </p>
-                                </li>
-                                <li>
-                                    <h3>Specialization Course</h3>
-                                    <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                    <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                    <p class="descripcion">
-                                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                    </p>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-        <section id="empresas">
-            <div class="main">
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>Empresas</p>
-                    </div>
-                    <div class="datos">
-                        <p>Empresas</p>
-                        <div class="empresas">
-                            <div>
-                                <img src="./img/img1.png" alt="">
-                            </div>
-                            <div>
-                                <img src="./img/img1.png" alt="">
-                            </div>
-                            <div>
-                                <img src="./img/img1.png" alt="">
-                            </div>
-                            <div>
-                                <img src="./img/img1.png" alt="">
-                            </div>
-                            <div>
-                                <img src="./img/img1.png" alt="">
-                            </div>
-                            <div>
-                                <img src="./img/img1.png" alt="">
-                            </div>
-
-                        </div>
-        
-                    </div>
-                </div>
-            </div>            
-        </section>
-        <section id="opiniones">
-            <div class="mascara">
+                        <div class="datos">
+                            <h2>Trabajos realizados</h2>
             
-            </div>
-            <div class="main">
-                
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>opiniones</p>
-                    </div>
-                    <div class="datos">
-                        <div class="grilla-items">
-                            <div>
-                                <img src="./img/comilla.svg" alt="">
-                            </div>
-                
-                            <h1>
-                                creative & dedicated is things that Jonny studio brings for your house
-                            </h1>
-                        </div>
-                        <div class="grilla-items">
-                            <div class="opinion-item">
-                                <p class="opinion">
-                                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eaque reiciendis quisquam alias cupiditate sed similique sapiente at deserunt. Ducimus esse facere blanditiis quidem asperiores. Sed, at? Sed, nobis illum?"                            
-                                </p>
-                                <p class="firma">
-                                    Juan Sanchez
-                                </p>
-                                <p class="origen">
-                                    La sala de mi casa
-                                </p>
-                            </div>
-                            <div class="opinion-item d-none">
-                                <p class="opinion">
-                                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eaque reiciendis quisquam alias cupiditate sed similique sapiente at deserunt. Ducimus esse facere blanditiis quidem asperiores. Sed, at? Sed, nobis illum?"                            
-                                </p>
-                                <p class="firma">
-                                    Miguelito
-                                </p>
-                                <p class="origen">
-                                    La sala de mi casa
-                                </p>
-                            </div>
-                            <div class="opinion-item d-none">
-                                <p class="opinion">
-                                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eaque reiciendis quisquam alias cupiditate sed similique sapiente at deserunt. Ducimus esse facere blanditiis quidem asperiores. Sed, at? Sed, nobis illum?"                            
-                                </p>
-                                <p class="firma">
-                                    Manuela
-                                </p>
-                                <p class="origen">
-                                    La sala de mi casa
-                                </p>
-                            </div>
-                            <div class="controles">
-                                <a class="preview">
-                                    <p><</p>
+                            <div class="grilla-jobs">
+                                <a class="grilla-items">
+                                    <h5>UCAM Minimalist Apartment</h5>
+                                    <p>papelito in paelito</p>
                                 </a>
-                                <a class="next">
-                                    <p>></p>
+                                <a class="grilla-items">
+                                    <h5>UCAM Minimalist Apartment</h5>
+                                    <p>papelito in paelito</p>
                                 </a>
+                                <a class="grilla-items">
+                                    <h5>UCAM Minimalist Apartment</h5>
+                                    <p>papelito in paelito</p>
+                                </a>
+                                <a class="grilla-items">
+                                    <h5>UCAM Minimalist Apartment</h5>
+                                    <p>papelito in paelito</p>
+                                </a>
+                                <a class="grilla-items">
+                                    <h5>UCAM Minimalist Apartment</h5>
+                                    <p>papelito in paelito</p>
+                                </a>
+                                <a class="grilla-items">
+                                    <h5>UCAM Minimalist Apartment</h5>
+                                    <p>papelito in paelito</p>
+                                </a>
+
+                                
+
                             </div>
+                            
+                            <a href="">
+                                <h3>OTROS TRABAJOS ></h3>
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>
 
-        </section>
-        <section id="contacto">
-            <div class="main">
-                <div class="sub-container">
-                    <div class="titulo">
-                        <p>Contacto</p>
-                    </div>
-                    <div class="datos">
-                        <p>Contactame</p>
-                        <form action="">
-                            <div class="fila">
-                                <div class="nombre-email">
-                                    <div class="col">
-                                      <input type="text" class="form-control" placeholder="Nombre *" required>
-                                    </div>
-                                    <div class="col">
-                                      <input type="email" class="form-control" placeholder="Email *" required>
-                                    </div>
+            </section>
+            <section id="servicios" class="section" data-anchor="servicios">
+                <div class="main">
+                    <div class="sub-container">
+                        <div class="titulo">
+                            <p>Servicios</p>
+                        </div>
+                        <div class="datos">
+                            <p>Mis Servicios</p>
+            
+                            <h1>Construyo <span>cosas maravillosas</span></h1>
+
+                            <ol class="servicios">
+                                <li>Developer</li>
+                                <li>Developer</li>
+                                <li>Developer</li>
+                                <li>Developer</li>
+                                <li>Developer</li>
+                            </ol>
+                        </div>
+                        <div class="tiempo">
+                            <div class="contenedor-interno">
+                                <img src="./img/img2.jpg" alt="">
+                                <div class="annos">
+                                    <h1>5</h1>
+                                    <p>años de experiencia</p>
                                 </div>
                             </div>
-                            <div class="form-group my-3">
-                                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Asunto *" required>
+                        </div>
+                    </div>
+                </div>            
+            </section>
+            <section id="resume" class="section" data-anchor="resume">
+                <div class="mascara">
+                
+                </div>
+                <div class="main">
+                    
+                    <div class="sub-container">
+                        <div class="titulo">
+                            <p>resume</p>
+                        </div>
+                        <div class="datos">
+                            <div class="grilla-items">
+                                <p>Educación</p>
+                                <ul class="item">
+                                    <li>
+                                        <h3>Specialization Course</h3>
+                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
+                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
+                                        <p class="descripcion">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h3>Specialization Course</h3>
+                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
+                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
+                                        <p class="descripcion">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
+                                        </p>
+                                    </li>
+                                </ul>
                             </div>
-                            <div class="form-group my-3">
-                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mensaje" rows="3"></textarea>
+                            <div class="grilla-items">
+                                <p>Experiencia</p>
+                                <ul class="item">
+                                    <li>
+                                        <h3>Specialization Course</h3>
+                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
+                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
+                                        <p class="descripcion">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
+                                        </p>
+                                    </li>
+                                    <li>
+                                        <h3>Specialization Course</h3>
+                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
+                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
+                                        <p class="descripcion">
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
+                                        </p>
+                                    </li>
+                                </ul>
                             </div>
-                            <button type="submit" class="btn my-3">Enviar</button>
-
-                        </form>
-        
+                        </div>
                     </div>
                 </div>
-            </div>            
-        </section>
+
+            </section>
+            <section id="empresas" class="section" data-anchor="empresas">
+                <div class="main">
+                    <div class="sub-container">
+                        <div class="titulo">
+                            <p>Empresas</p>
+                        </div>
+                        <div class="datos">
+                            <p>Empresas</p>
+                            <div class="empresas">
+                                <div>
+                                    <img src="./img/img1.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="./img/img1.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="./img/img1.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="./img/img1.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="./img/img1.png" alt="">
+                                </div>
+                                <div>
+                                    <img src="./img/img1.png" alt="">
+                                </div>
+
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>            
+            </section>
+            <section id="opiniones" class="section" data-anchor="opiniones">
+                <div class="mascara">
+                
+                </div>
+                <div class="main">
+                    
+                    <div class="sub-container">
+                        <div class="titulo">
+                            <p>opiniones</p>
+                        </div>
+                        <div class="datos">
+                            <div class="grilla-items">
+                                <div>
+                                    <img src="./img/comilla.svg" alt="">
+                                </div>
+                    
+                                <h1>
+                                    creative & dedicated is things that Jonny studio brings for your house
+                                </h1>
+                            </div>
+                            <div class="grilla-items">
+                                <div class="opinion-item">
+                                    <p class="opinion">
+                                        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eaque reiciendis quisquam alias cupiditate sed similique sapiente at deserunt. Ducimus esse facere blanditiis quidem asperiores. Sed, at? Sed, nobis illum?"                            
+                                    </p>
+                                    <p class="firma">
+                                        Juan Sanchez
+                                    </p>
+                                    <p class="origen">
+                                        La sala de mi casa
+                                    </p>
+                                </div>
+                                <div class="opinion-item d-none">
+                                    <p class="opinion">
+                                        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eaque reiciendis quisquam alias cupiditate sed similique sapiente at deserunt. Ducimus esse facere blanditiis quidem asperiores. Sed, at? Sed, nobis illum?"                            
+                                    </p>
+                                    <p class="firma">
+                                        Miguelito
+                                    </p>
+                                    <p class="origen">
+                                        La sala de mi casa
+                                    </p>
+                                </div>
+                                <div class="opinion-item d-none">
+                                    <p class="opinion">
+                                        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eaque reiciendis quisquam alias cupiditate sed similique sapiente at deserunt. Ducimus esse facere blanditiis quidem asperiores. Sed, at? Sed, nobis illum?"                            
+                                    </p>
+                                    <p class="firma">
+                                        Manuela
+                                    </p>
+                                    <p class="origen">
+                                        La sala de mi casa
+                                    </p>
+                                </div>
+                                <div class="controles">
+                                    <a class="preview">
+                                        <p><</p>
+                                    </a>
+                                    <a class="next">
+                                        <p>></p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+            <section id="contacto" class="section" data-anchor="contacto">
+                <div class="main">
+                    <div class="sub-container">
+                        <div class="titulo">
+                            <p>Contacto</p>
+                        </div>
+                        <div class="datos">
+                            <p>Contactame</p>
+                            <form action="">
+                                <div class="fila">
+                                    <div class="nombre-email">
+                                        <div class="col">
+                                        <input type="text" class="form-control" placeholder="Nombre *" required>
+                                        </div>
+                                        <div class="col">
+                                        <input type="email" class="form-control" placeholder="Email *" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group my-3">
+                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Asunto *" required>
+                                </div>
+                                <div class="form-group my-3">
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mensaje" rows="3"></textarea>
+                                </div>
+                                <button type="submit" class="btn my-3">Enviar</button>
+
+                            </form>
+            
+                        </div>
+                    </div>
+                </div>            
+            </section>
+
     </main>
-    
+
+    <script src="./js/easings.min.js"></script>
+    <script type="text/javascript" src="./js/scrolloverflow.min.js"></script>
+    <script type="text/javascript" src="./js/fullpage.js"></script>
+    <script>
+        new fullpage('#fullpage', {
+            //options here
+            autoScrolling:true,
+            scrollOverflow: true,
+            recordHistory:false,
+            scrollOverflowReset:true,
+            anchors:['presentation', 'sobre-mi', 'experiencia', 'servicios', 'resume', 'empresas', 'opiniones', 'contacto'],
+            marginBottom: '10%',
+            menu: '#myMenu',
+
+
+        });
+
+        //métodos
+    /*     fullpage_api.setAllowScrolling(false); */
+    </script>
+
     <script src="./js/bootstrap.bundle.min.js"></script>
     <script src="./js/opiniones.js"></script>
     <script src="./js/hamburguer.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/changeNavbar.js"></script>
 </body>
 </html>
