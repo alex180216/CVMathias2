@@ -12,7 +12,13 @@
 
     <link rel="stylesheet" href="./css/styles.css">
 </head>
-<body>
+<body onload="pasarEspanol();">
+    <div class="loader" id="loader">
+        <div class="spinner">
+            <div class="double-bounce1"></div>
+            <div class="double-bounce2"></div>
+        </div>
+    </div>
     <header>
 		<div class="contenedor-nav fixed">
 			<nav class="navbar">
@@ -124,8 +130,8 @@
             </ul>
         </div>
         <div class="contenedor-lenguajes">
-            <a href="" class="active">ENG</a>
-            <a href="" class="no-active">SPA</a>
+            <a href="" class="no-active" id="ingles">ENG</a>
+            <a href="" class="active" id="espanol">SPA</a>
 
         </div>
         <div class="contenedor-footer">
@@ -136,49 +142,49 @@
         <div id="menu-ham" class="hamburguer menu-ham-inactivo">
             <div class="contenedor-interno">
                 <div class="lenguajes">
-                    <a href="" class="active">ENG</a>
-                    <a href="" class="no-active">SPA</a>
+                    <a href="" class="no-active" id="ingles-hamb">ENG</a>
+                    <a href="" class="active" id="espanol-hamb">SPA</a>
                     <a href="" id="cerrar-ham">X</a>
                 </div>
                 <div id="myMenu" class="menucito">
                     <ul>
                         <li data-menuanchor="presentation">
-                            <a href="#presentation">
+                            <a href="#presentation" id="presentation-ham">
                                 Presentacion
                             </a>
                         </li>
                         <li data-menuanchor="sobre-mi">
-                            <a href="#sobre-mi">
+                            <a href="#sobre-mi" id="sobremi-ham">
                                 Sobre mi
                             </a>
                         </li>
                         <li data-menuanchor="experiencia">
-                            <a href="#experiencia">
+                            <a href="#experiencia" id="experiencia-ham">
                                 Experiencia
                             </a>
                         </li>
                         <li data-menuanchor="servicios">
-                            <a href="#servicios">
+                            <a href="#servicios" id="servicios-ham">
                                 Servicios
                             </a>
                         </li>
                         <li data-menuanchor="resume">
-                            <a href="#resume">
+                            <a href="#resume" id="resume-ham">
                                 Resumen
                             </a>
                         </li>
                         <li data-menuanchor="empresas">
-                            <a href="#empresas">
+                            <a href="#empresas" id="empresas-ham">
                                 Empresas
                             </a>
                         </li>
                         <li data-menuanchor="opiniones">
-                            <a href="#opiniones">
+                            <a href="#opiniones" id="opiniones-ham">
                                 Opiniones
                             </a>
                         </li>
                         <li data-menuanchor="contacto">
-                            <a href="#contacto">
+                            <a href="#contacto" id="contacto-ham">
                                 Contacto
                             </a>
                         </li>
@@ -237,7 +243,7 @@
                         <div class="datos">
                             <p>Welcome to <br>Matias Design Studio</p>
                 
-                            <h1><span>Hola!</span> Soy </h1>
+                            <h1 id="saludo-presentacion"><span>Hola!</span></h1><h1 id="saludo-h1"> Soy </h1>
                             <h1 class="margin-minus">Matias Wajchman.</h1>
 
                             <div class="margen-bajo">
@@ -252,56 +258,23 @@
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
-                            <p>Habilidades</p>
+                            <p id="titulo-habilidades">Habilidades</p>
                         </div>
                         <div class="datos">
-                            <p>Sobre mi</p>
+                            <p id="subtitulo-habilidades">Sobre mi</p>
             
-                            <h1>My mission is <span>design & develop</span> the best websites around</h1>
+                            <h1 id="titulo-hab1">My mission is</h1>
+                            <h1 id="titulo-hab-span"><span> design & develop </span></h1>
+                            <h1 id="titulo-hab2"> the best websites around</h1>
 
-                            <p class="descripcion">
+                            <p class="descripcion" id="desc-hab">
                                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eum quasi consectetur tenetur perspiciatis iste beatae pariatur culpa, fuga iusto, harum accusamus corrupti quos! Nam tenetur aspernatur ab, dolor aut ipsam.
                                 
                             </p>
                         </div>
                         <div class="habilidades">
                             <div class="lista-progress">
-                                <div class="item my-5">
-                                    <div class="nivel">
-                                        <p>Development</p>
-                                        <p>75%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="item my-5">
-                                    <div class="nivel">
-                                        <p>Development</p>
-                                        <p>75%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="item my-5">
-                                    <div class="nivel">
-                                        <p>Development</p>
-                                        <p>75%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
-                                <div class="item my-5">
-                                    <div class="nivel">
-                                        <p>Development</p>
-                                        <p>75%</p>
-                                    </div>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                    </div>
-                                </div>
+                                <!-- INSERTADO CON JAVASCRIPT -->
         
                             </div>
                         </div>
@@ -317,10 +290,10 @@
                     
                     <div class="sub-container">
                         <div class="titulo">
-                            <p>Experiencia</p>
+                            <p id="tituloExp">Experiencia</p>
                         </div>
                         <div class="datos">
-                            <h2>Trabajos realizados</h2>
+                            <h2 id="sub-exp">Trabajos realizados</h2>
             
                             <div class="grilla-jobs">
                                 <a class="grilla-items">
@@ -353,7 +326,7 @@
                             </div>
                             
                             <a href="">
-                                <h3>OTROS TRABAJOS ></h3>
+                                <h3 id="enlace-otros">OTROS TRABAJOS ></h3>
                             </a>
                         </div>
                     </div>
@@ -364,14 +337,15 @@
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
-                            <p>Servicios</p>
+                            <p id="titulo-serv">Servicios</p>
                         </div>
                         <div class="datos">
-                            <p>Mis Servicios</p>
+                            <p id="sub-serv">Mis Servicios</p>
             
-                            <h1>Construyo <span>cosas maravillosas</span></h1>
+                            <h1 id="titulo-h1-serv">Construyo</h1>
+                            <h1 id="span-h1-serv"><span> cosas maravillosas </span></h1>
 
-                            <ol class="servicios">
+                            <ol class="servicios" id="lista-serv">
                                 <li>Developer</li>
                                 <li>Developer</li>
                                 <li>Developer</li>
@@ -384,7 +358,7 @@
                                 <img src="./img/img2.jpg" alt="">
                                 <div class="annos">
                                     <h1>5</h1>
-                                    <p>años de experiencia</p>
+                                    <p id="tiempo">años de experiencia</p>
                                 </div>
                             </div>
                         </div>
@@ -399,49 +373,19 @@
                     
                     <div class="sub-container">
                         <div class="titulo">
-                            <p>resume</p>
+                            <p id="titulo-res">resume</p>
                         </div>
                         <div class="datos">
                             <div class="grilla-items">
-                                <p>Educación</p>
-                                <ul class="item">
-                                    <li>
-                                        <h3>Specialization Course</h3>
-                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                        <p class="descripcion">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <h3>Specialization Course</h3>
-                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                        <p class="descripcion">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                        </p>
-                                    </li>
+                                <p id="subtitulo-res-educacion">Educación</p>
+                                <ul class="item" id="lista-educacion">
+                                    <!-- INSERTADO CON JS -->
                                 </ul>
                             </div>
                             <div class="grilla-items">
-                                <p>Experiencia</p>
-                                <ul class="item">
-                                    <li>
-                                        <h3>Specialization Course</h3>
-                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                        <p class="descripcion">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                        </p>
-                                    </li>
-                                    <li>
-                                        <h3>Specialization Course</h3>
-                                        <p class="lugar">Universidad Aconcagua, Mendoza, Argentina</p>
-                                        <p class="fecha">Enero 2004 - Dicembre 2010</p>
-                                        <p class="descripcion">
-                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et accusantium dolorum assumenda obcaecati. Corrupti ratione quibusdam facere distinctio veritatis debitis assumenda consectetur consequatur similique molestiae. Labore fugit molestiae animi pariatur.
-                                        </p>
-                                    </li>
+                                <p id="subtitulo-res-experiencia">Experiencia</p>
+                                <ul class="item" id="lista-trabajos-experiencia">
+                                    <!-- INSERTADO JS -->
                                 </ul>
                             </div>
                         </div>
@@ -453,7 +397,7 @@
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
-                            <p>Empresas</p>
+                            <p id="titulo-empresas">Empresas</p>
                         </div>
                         <div class="datos">
                             <p>Empresas</p>
@@ -491,7 +435,7 @@
                     
                     <div class="sub-container">
                         <div class="titulo">
-                            <p>opiniones</p>
+                            <p id="titulo-opiniones">opiniones</p>
                         </div>
                         <div class="datos">
                             <div class="grilla-items">
@@ -499,11 +443,11 @@
                                     <img src="./img/comilla.svg" alt="">
                                 </div>
                     
-                                <h1>
+                                <h1 id="subtitulo-opiniones">
                                     creative & dedicated is things that Jonny studio brings for your house
                                 </h1>
                             </div>
-                            <div class="grilla-items">
+                            <div class="grilla-items" id="lista-opiniones">
                                 <div class="opinion-item">
                                     <p class="opinion">
                                         "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis, eaque reiciendis quisquam alias cupiditate sed similique sapiente at deserunt. Ducimus esse facere blanditiis quidem asperiores. Sed, at? Sed, nobis illum?"                            
@@ -555,28 +499,28 @@
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
-                            <p>Contacto</p>
+                            <p id="titulo-contacto">Contacto</p>
                         </div>
                         <div class="datos">
-                            <p>Contactame</p>
+                            <p id="subtitulo-contacto">Contactame</p>
                             <form action="">
                                 <div class="fila">
                                     <div class="nombre-email">
                                         <div class="col">
-                                        <input type="text" class="form-control" placeholder="Nombre *" required>
+                                        <input id="nombre" type="text" class="form-control" placeholder="Nombre *" required>
                                         </div>
                                         <div class="col">
-                                        <input type="email" class="form-control" placeholder="Email *" required>
+                                        <input id="email" type="email" class="form-control" placeholder="Email *" required>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group my-3">
-                                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Asunto *" required>
+                                    <input id="asunto" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Asunto *" required>
                                 </div>
                                 <div class="form-group my-3">
                                     <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Mensaje" rows="3"></textarea>
                                 </div>
-                                <button type="submit" class="btn my-3">Enviar</button>
+                                <button id="btn-enviar" type="submit" class="btn my-3">Enviar</button>
 
                             </form>
             
@@ -617,5 +561,6 @@
     <script src="./js/hamburguer.js"></script>
     <script src="./js/app.js"></script>
     <script src="./js/changeNavbar.js"></script>
+    <script src="./js/changeLanguage.js"></script>
 </body>
 </html>

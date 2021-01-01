@@ -2,6 +2,8 @@ const itemsExperiencia1 = document.querySelectorAll('#experiencia > div >.main >
 const itemsExperiencia2 = document.querySelectorAll('#experiencia > div > div > div > .main > .sub-container > .datos > .grilla-jobs > .grilla-items');
 const contenedor = document.querySelector('#experiencia');
 
+
+
 /* BACKGROUND DINAMICO */
 
 for(let i=0; i < itemsExperiencia1.length; i++){
