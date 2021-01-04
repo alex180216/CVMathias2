@@ -323,16 +323,19 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
     padding-inline: 10px;
 }
 .contenedor-footer{
-    position: fixed;
-    top: 90vh;
-    left: 5%;
-    z-index: 350;
+   margin: auto;
+   background-color: var(--background-inputs);
+   position: absolute;
+   bottom: 0;
+   width: 100%;
+   padding: .3em;
 }
 .contenedor-footer > a{
     text-decoration: none;
     padding-inline: 10px;
     color: var(--color-light);
-    font-size: 18px;
+    font-size: 1em;
+    text-align: center;
 }
 #fullpage{
     position: absolute;
@@ -1641,6 +1644,9 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
 /* MEDIA QUERYS */
 
 @media (max-width:768px){
+    .contenedor-lenguajes{
+        display: none;
+    }
     #whatsapp{
         position: fixed;
         width: 50px;
