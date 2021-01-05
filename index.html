@@ -236,7 +236,7 @@
     </header>
         
     <main id="fullpage">
-            <section id="presentation" class="section" data-anchor="presentation">
+            <section id="presentation" class="section" data-anchor="presentation-anchor">
                 <div class="mascara">
                 
                 </div>
@@ -259,7 +259,7 @@
                 </div>
 
             </section>
-            <section id="sobre-mi" class="section" data-anchor="sobre-mi">
+            <section id="sobre-mi" class="section" data-anchor="sobre-mi-anchor">
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
@@ -286,7 +286,7 @@
                     </div>
                 </div>            
             </section>
-            <section id="experiencia" class="section" data-anchor="experiencia">
+            <section id="experiencia" class="section" data-anchor="experiencia-anchor">
                 <!-- <img src="./img/img1.png" alt=""> -->
                 <div class="mascara">
                     
@@ -338,7 +338,7 @@
                 </div>
 
             </section>
-            <section id="servicios" class="section" data-anchor="servicios">
+            <section id="servicios" class="section" data-anchor="servicios-anchor">
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
@@ -370,7 +370,7 @@
                     </div>
                 </div>            
             </section>
-            <section id="resume" class="section" data-anchor="resume">
+            <section id="resume" class="section" data-anchor="resume-anchor">
                 <div class="mascara">
                 
                 </div>
@@ -398,7 +398,7 @@
                 </div>
 
             </section>
-            <section id="empresas" class="section" data-anchor="empresas">
+            <section id="empresas" class="section" data-anchor="empresas-anchor">
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
@@ -432,7 +432,7 @@
                     </div>
                 </div>            
             </section>
-            <section id="opiniones" class="section" data-anchor="opiniones">
+            <section id="opiniones" class="section" data-anchor="opiniones-anchor">
                 <div class="mascara">
                 
                 </div>
@@ -500,7 +500,7 @@
                 </div>
 
             </section>
-            <section id="contacto" class="section" data-anchor="contacto">
+            <section id="contacto" class="section" data-anchor="contacto-anchor">
                 <div class="main">
                     <div class="sub-container">
                         <div class="titulo">
@@ -545,14 +545,21 @@
     <script src="./js/easings.min.js"></script>
     <script type="text/javascript" src="./js/scrolloverflow.min.js"></script>
     <script type="text/javascript" src="./js/fullpage.js"></script>
+    
+    <!-- MDB -->
+    <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"
+    ></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>   
     <script>
-        new fullpage('#fullpage', {
+        var myFullpage = new fullpage('#fullpage', {
             //options here
             autoScrolling:true,
             scrollOverflow: true,
             recordHistory:false,
             scrollOverflowReset:true,
-            anchors:['presentation', 'sobre-mi', 'experiencia', 'servicios', 'resume', 'empresas', 'opiniones', 'contacto'],
+            anchors:['presentation-anchor', 'sobre-mi-anchor', 'experiencia-anchor', 'servicios-anchor', 'resume-anchor', 'empresas-anchor', 'opiniones-anchor', 'contacto-anchor'],
             marginBottom: '10%',
             menu: '#myMenu',
 
@@ -562,16 +569,10 @@
         //métodos
         
     </script>
-    <!-- MDB -->
-    <script
-        type="text/javascript"
-        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.0.0/mdb.min.js"
-    ></script>
-    <script src="./js/bootstrap.bundle.min.js"></script>
-    <script src="./js/opiniones.js"></script>
-    <script src="./js/hamburguer.js"></script>
-    <script src="./js/app.js"></script>
-    <script src="./js/changeNavbar.js"></script>
+     <script src="./js/opiniones.js"></script>
+     <script src="./js/hamburguer.js"></script>
+     <script src="./js/app.js"></script>
+     <script src="./js/changeNavbar.js"></script>
     <script src="./js/changeLanguage.js"></script>
 </body>
 </html>

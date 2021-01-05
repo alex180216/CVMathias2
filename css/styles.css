@@ -268,9 +268,9 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
 }
 #whatsapp{
     position: fixed;
-    width: 60px;
+    width: 3em;
     z-index: 500;
-    top: 80vh;
+    top: 77vh;
     right: 5%;
     -webkit-animation: whatsapp 2s infinite ease-in-out;
     animation: whatsapp 2s infinite ease-in-out;
@@ -329,6 +329,10 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
    bottom: 0;
    width: 100%;
    padding: .3em;
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-content: center;
+   align-items: center;
 }
 .contenedor-footer > a{
     text-decoration: none;
@@ -1688,9 +1692,9 @@ header > #menu-ham > .contenedor-interno > .redes > li > a > svg{
     .contenedor-niveles {
         display: none;
     }
-    .contenedor-footer{
+    /* .contenedor-footer{
         display: none;
-    }
+    } */
     #presentation > div > .main > .sub-container > .titulo{
         display: none;
     }

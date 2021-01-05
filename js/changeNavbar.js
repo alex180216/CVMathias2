@@ -1,4 +1,4 @@
-const navbar = document.querySelector('header > .contenedor-nav');
+const navbar = document.querySelector('.contenedor-nav');
 /* window.onscroll = scrollFunction();
 
 function scrollFunction() {
@@ -13,6 +13,6 @@ function scrollFunction() {
 } */
 
 window.onscroll = function() {
-  //var y = window.scrollY;
-  console.log('se mueve');
+  var y = window.scrollY;
+  console.log(y);
 };
