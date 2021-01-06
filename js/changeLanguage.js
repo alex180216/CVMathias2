@@ -83,6 +83,10 @@ btnEspanol.addEventListener('click', (e) =>{
     btnEspanol.classList.remove('no-active');
     btnIngles.classList.remove('active');
     btnIngles.classList.add('no-active');
+    btnEspanolHam.classList.add('active');
+    btnEspanolHam.classList.remove('no-active');
+    btnInglesHam.classList.remove('active');
+    btnInglesHam.classList.add('no-active');
     
     pasarEspanol();
 } );
@@ -95,6 +99,10 @@ btnIngles.addEventListener('click', (e) =>{
     btnIngles.classList.remove('no-active');
     btnEspanol.classList.remove('active');
     btnEspanol.classList.add('no-active');
+    btnInglesHam.classList.add('active');
+    btnInglesHam.classList.remove('no-active');
+    btnEspanolHam.classList.remove('active');
+    btnEspanolHam.classList.add('no-active');
     pasarIngles();
 } );
 
@@ -106,6 +114,10 @@ btnEspanolHam.addEventListener('click', (e) =>{
     btnEspanolHam.classList.remove('no-active');
     btnInglesHam.classList.remove('active');
     btnInglesHam.classList.add('no-active');
+    btnEspanol.classList.add('active');
+    btnEspanol.classList.remove('no-active');
+    btnIngles.classList.remove('active');
+    btnIngles.classList.add('no-active');
     
     pasarEspanol();
 } );
@@ -118,6 +130,10 @@ btnInglesHam.addEventListener('click', (e) =>{
     btnInglesHam.classList.remove('no-active');
     btnEspanolHam.classList.remove('active');
     btnEspanolHam.classList.add('no-active');
+    btnIngles.classList.add('active');
+    btnIngles.classList.remove('no-active');
+    btnEspanol.classList.remove('active');
+    btnEspanol.classList.add('no-active');
     pasarIngles();
 } );
 

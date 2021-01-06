@@ -4,7 +4,6 @@ let cerrarHamburguer = document.querySelector('#cerrar-ham');
 let enlaces = document.querySelectorAll('.menucito > ul > li > a');
 
 const cerrar = (e) =>{
-    e.preventDefault();
     menu.classList.remove('menu-ham-activo');
     menu.classList.add('menu-ham-inactivo');
 }
