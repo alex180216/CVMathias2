@@ -70,56 +70,56 @@
         <div class="contenedor-niveles">
             <ul id="myMenu">
                 <li class="item" data-menuanchor="presentation-anchor">
-                    <a href="#presentation">
+                    <a href="#presentation-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
                 <li class="item" data-menuanchor="sobre-mi-anchor">
-                    <a href="#sobre-mi">
+                    <a href="#sobre-mi-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
                 <li class="item" data-menuanchor="experiencia-anchor">
-                    <a href="#experiencia">
+                    <a href="#experiencia-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
                 <li class="item" data-menuanchor="servicios-anchor">
-                    <a href="#servicios">
+                    <a href="#servicios-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
                 <li class="item" data-menuanchor="resume-anchor">
-                    <a href="#resume">
+                    <a href="#resume-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
                 <li class="item" data-menuanchor="empresas-anchor">
-                    <a href="#empresas">
+                    <a href="#empresas-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
                 <li class="item" data-menuanchor="opiniones-anchor">
-                    <a href="#opiniones">
+                    <a href="#opiniones-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
                     </a>
                 </li>
                 <li class="item" data-menuanchor="contacto-anchor">
-                    <a href="#contacto">
+                    <a href="#contacto-anchor">
                         <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-circle-fill" viewBox="0 0 16 16">
                             <circle cx="8" cy="8" r="8"/>
                         </svg>
@@ -154,42 +154,42 @@
                 <div id="myMenu" class="menucito">
                     <ul>
                         <li data-menuanchor="presentation-anchor">
-                            <a href="#presentation" id="presentation-ham">
+                            <a href="#presentation-anchor" id="presentation-ham">
                                 Presentacion
                             </a>
                         </li>
                         <li data-menuanchor="sobre-mi-anchor">
-                            <a href="#sobre-mi" id="sobremi-ham">
+                            <a href="#sobre-mi-anchor" id="sobremi-ham">
                                 Sobre mi
                             </a>
                         </li>
                         <li data-menuanchor="experiencia-anchor">
-                            <a href="#experiencia" id="experiencia-ham">
+                            <a href="#experiencia-anchor" id="experiencia-ham">
                                 Experiencia
                             </a>
                         </li>
                         <li data-menuanchor="servicios-anchor">
-                            <a href="#servicios" id="servicios-ham">
+                            <a href="#servicios-anchor" id="servicios-ham">
                                 Servicios
                             </a>
                         </li>
                         <li data-menuanchor="resume-anchor">
-                            <a href="#resume" id="resume-ham">
+                            <a href="#resume-anchor" id="resume-ham">
                                 Resumen
                             </a>
                         </li>
                         <li data-menuanchor="empresas-anchor">
-                            <a href="#empresas" id="empresas-ham">
+                            <a href="#empresas-anchor" id="empresas-ham">
                                 Empresas
                             </a>
                         </li>
                         <li data-menuanchor="opiniones-anchor">
-                            <a href="#opiniones" id="opiniones-ham">
+                            <a href="#opiniones-anchor" id="opiniones-ham">
                                 Opiniones
                             </a>
                         </li>
                         <li data-menuanchor="contacto-anchor">
-                            <a href="#contacto" id="contacto-ham">
+                            <a href="#contacto-anchor" id="contacto-ham">
                                 Contacto
                             </a>
                         </li>
@@ -563,6 +563,11 @@
             marginBottom: '10%',
             menu: '#myMenu',
 
+            //Accesibilidad
+            keyboardScrolling: true,
+            animateAnchor: true,
+            recordHistory: 'false',
+            dragAndMove: 'fingersonly',
 
         });
 
