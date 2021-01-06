@@ -149,7 +149,7 @@ header{
 }
 /* MENU LATERAL */
 header > #menu-ham{
-    position: fixed;
+    position: absolute;
     top: 0;
     /* right: -400px; */
     bottom: 0;
